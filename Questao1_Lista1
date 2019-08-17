@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    //Ponteiros parecem ser apenas endereços de memoria,
+    //porém é evidente sua enorme variadade de aplicações.
+    //Desde alocação dinamica, oque permite um uso mais eficiente da memoria,
+    //até o uso desse recurso para tarefas mais complexas,
+    //como tecnicas de engenharia de softwares.
+
+    return 0;
+}
