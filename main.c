@@ -2,11 +2,15 @@
 
 int main()
 {
-    //1---Ponteiros parecem ser apenas endereços de memoria,
-    //porém é evidente sua enorme variadade de aplicações.
-    //Desde alocação dinamica, oque permite um uso mais eficiente da memoria,
-    //até o uso desses ponteiros para tarefas mais complexas,
-    //como tecnicas de engenharia de softwares.
-
+    int vet[] = {4,9,13};
+    int i;
+    for(i=0;i<3;i++){
+      printf("%d ",*(vet+i));
+    }
+    //Serao impressos todos os valores dos elementos do vetor
+    for(i=0;i<3;i++){
+      printf("%X ",vet+i);
+    }
+    //Serao impressos todos os enderecos dos elementos do vetor
     return 0;
 }
