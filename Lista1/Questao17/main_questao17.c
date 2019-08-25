@@ -77,10 +77,11 @@ int main()
     start=clock();
     meuordena(vetor2,10,ptrCompara2);
     end=clock();
-    //Medicao do tempo para a funcao 'meucompara'.
+    //Medicao do tempo para a funcao 'meuordena'.
     double Tempo2 =((double)(end-start))/CLOCKS_PER_SEC;
     printf("Tempo gasto em 'meuordena': %.8fs\n", Tempo2);
     free(vetor);
     free(vetor2);
     //Liberacao da memoria utilizada.
+    return 0;
 }
