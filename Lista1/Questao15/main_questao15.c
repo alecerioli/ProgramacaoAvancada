@@ -22,11 +22,10 @@ int compara (const void *a, const void *b){
 int main()
 {
     int i;
-    float w;
     float *vetor;
     int (*ptrCompara)();
     ptrCompara=compara;
-    vetor=malloc(5*sizeof(w));
+    vetor=malloc(5*sizeof(float));
     vetor[0]=112.1;
     vetor[1]=2.3;
     vetor[2]=32.3;
@@ -51,4 +50,5 @@ int main()
     //Impressao do vetor ordenado.
     free(vetor);
     //Liberacao da memoria utilizada.
+    return 0;
 }
