@@ -21,9 +21,8 @@ void ordena(float *vetor, int n){
 int main()
 {
     int i;
-    float w;
     float *vetor;
-    vetor=malloc(5*sizeof(w));
+    vetor=malloc(5*sizeof(float));
     vetor[0]=112.1;
     vetor[1]=2.3;
     vetor[2]=32.3;
@@ -38,4 +37,5 @@ int main()
         printf("%f ",vetor[i]);
     }
     free(vetor);
+    return 0;
 }
