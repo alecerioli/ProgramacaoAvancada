@@ -7,6 +7,7 @@ int main (){
     int i,n;
     clock_t start, end;
     n=1000;
+    GC_INIT();
     start = clock();
     for (i=0; i<n; i++){
         int **ptr = (int **)GC_MALLOC(sizeof(int*));
