@@ -6,14 +6,14 @@ int main(){
     p = &i;
     q = &j;
     //p == &i;
-    //O uso de "==" não pode ser usado
+    //O uso de "==" não pode ser usado, uma vez que representa um comparador
     int a=*p - *q;
     printf("%d\n", a);
     //O resultado é -2, sendo o conteudo de 'p' menos o conteudo de 'q'
     int b=**&p;
     printf("%d\n", b);
-    //O resultado é 3, uma vez que b reprenta o conteudo do conteudo do endereco de 'p'.
-    //O conteudo do endereco de 'p' é o proprio 'p', ficando apenas o conteudo de 'p'
+    //O resultado é 3, uma vez que b reprenta o conteudo do conteudo do endereco de 'p',
+    //onde o conteudo do endereco de 'p' é o proprio 'p', ficando apenas o conteudo de 'p'
     int c=3 - *p/(*q) + 7;
     printf("%d\n", c);
     //O resultado é 10, uma vez sendo todas as variaveis inteiras e
