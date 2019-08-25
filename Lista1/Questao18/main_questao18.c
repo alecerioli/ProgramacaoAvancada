@@ -35,7 +35,7 @@ int main()
         printf("%d ",*(vetor2+i));
     }
     int *vetor3;
-    vetor3=malloc(4*sizeof(int));
+    vetor3=malloc(n*sizeof(int));
     somavetor(vetor1,vetor2,vetor3,n);
     printf("\n");
     for(i=0;i<n;i++){
