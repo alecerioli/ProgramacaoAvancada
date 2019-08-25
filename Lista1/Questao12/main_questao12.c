@@ -8,8 +8,7 @@ int main()
     //Comando valido: o elemento 2 do vetor
     //'aloha' receberá o valor de 'value'.
     scanf("%f", &aloha);
-    //Comando invalido: nao é possivel
-    //ler um endereco, ainda mais como float.
+    //Comando invalido: nao é possivel ler um endereco.
     //aloha = value";
     //Comado invalido: nao é possivel alterar
     //um endereco ('aloha' representa o endereco
@@ -22,13 +21,12 @@ int main()
     //'coisas' receberá o valor de 'aloha[3]'.
     //coisas[5] = aloha;
     //Comando invalido: nao é possivel fazer uma
-    //atribuicao de uma linha completa de uma
-    //matriz.
+    //atribuicao de uma linha completa de uma matriz.
     //pf = value;
-    //Comando invalido: nao é possivel alterar
-    //um endereco (pf é um ponteiro portanto um endereco).
+    //Comando invalido: nao é possivel atribuir a um ponteiro
+    //(um endereco) um valor comum.
     pf = aloha;
     //Comando valido: como ambos ('pf' e 'aloha')
-    //representam enderecos, essa atribuicao é possivel.
+    //representam ponteiros, essa atribuicao é possivel.
     return 0;
 }
