@@ -23,6 +23,7 @@ int main()
     int ncA=2;
     int nlB=2;
     int ncB=3;
+    //Usando valores de linhas e colunas definidos pelo programador
     int **A,**B,**C;
     A = (int**) malloc(nlA*sizeof(int*));
     B = (int**) malloc(nlB*sizeof(int*));
@@ -39,11 +40,13 @@ int main()
     for(i=0;i<nlA;i++){
         for(j=0;j<ncA;j++){
             A[i][j]=3*i+2*j;
+            //Criando valores aleatorios
         }
     }
     for(i=0;i<nlB;i++){
         for(j=0;j<ncB;j++){
             B[i][j]=i+5*j;
+            //Criando valores aleatorios
         }
     }
     for(i=0;i<nlA;i++){
@@ -52,6 +55,7 @@ int main()
         }
         printf("\n");
     }
+    //Imprimindo a matriz A
     printf("\n");
     for(i=0;i<nlB;i++){
         for(j=0;j<ncB;j++){
@@ -59,6 +63,7 @@ int main()
         }
         printf("\n");
     }
+    //Imprimindo a matriz B
     multiplica(A,B,C,nlA,ncA,ncB);
     printf("\n");
     for(i=0;i<nlA;i++){
@@ -67,6 +72,7 @@ int main()
         }
         printf("\n");
     }
+    //Imprimindo a matriz C= A*B
     for(int i=0; i<nlA; i++){
         free (A[i]);
     }
