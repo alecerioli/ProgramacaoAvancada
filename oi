@@ -1,0 +1,224 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int ***M;
+    int i,j,k;
+    int np,nl,nc;
+    //Definindo numero de planos,numero de colunas e numero de linhas.
+    np=4;nl=4;nc=4;
+    M = (int***)malloc(np*sizeof(int**));
+    M[0]=(int**)malloc(np*nl*sizeof(int*));
+    //Primeiro ajuste de enderecos dos planos.
+    for(i=1;i<np;i++){
+        M[i] = M[i-1] + nl;
+    }
+    //Alocacao dos dados em um unico malloc, desconsiderando os
+    //arrays auxiliares acima.
+    M[0][0]=(int*)malloc(np*nl*nc*sizeof(int));
+    //Segundo ajuste de enderecos dos planos.
+    for(i=1;i<np;i++){
+        for(j=0;j<nl;j++){
+            M[i][j] = M[i-1][j] + nl*nc;
+        }
+    }
+    //Ajuste de enderecos das linhas.
+    for(i=0;i<np;i++){
+        for(j=1;j<nl;j++){
+            M[i][j]=M[i][j-1]+nc;
+        }
+    }
+    //Inicializando matriz aleatoriamente pelo bloco unico.
+    for(i=0;i<np*nl*nc;i++){
+        M[0][0][i]=i+1;
+    }
+    //Leitura da matriz pela forma convencional.
+    for(i=0;i<np;i++){
+        for(j=0;j<nl;j++){
+            for(k=0;k<nc;k++){
+                printf("%d ",M[i][j][k]);
+            }
+            printf("\n");
+        }
+        //Espaco maior define mudanca de planos.
+        printf("\n\n\n");
+    }
+    //Liberacao da memoria.
+    free(M[0][0]);
+    free(M[0]);
+    free(M);
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int **x;
+    int r,i,j;
+    char M[8][8];
+    x = (int**) malloc(sizeof(int*));
+    // alocacao da matriz de elementos
+    x[0] = malloc(2*sizeof(int));
+    // ajuste de endereços
+    x[1]=x[0]+1;
+    printf("entre com o primeiro inteiro: ");
+    scanf("%d", x[0]);
+    printf("entre com o segundo inteiro: ");
+    scanf("%d", x[1]);
+    int l=0;//indice de linhas.
+    int c=31;//indice de colunas.
+    //Impressao e inicializacao da matriz M abaixo.
+    for(i = 0; i <32; i++) {
+        r = x[0][0] >> i;
+        if(r & 1) {
+            M[l][31-c]=1;
+            printf("1 ");
+        } else {
+            M[l][31-c]=0;
+            printf("0 ");
+        }
+        if(i==23||i==15||i==7){
+            l++;
+            c=31;
+            printf("\n");
+        }
+        else{
+            c--;
+        }
+    }
+    printf("\n");
+    c=31;
+    l++;
+    for(i = 0; i <32 ; i++) {
+        r = x[1][0] >> i;
+        if(r & 1) {
+            M[l][31-c]=1;
+            printf("1 ");
+        } else {
+            M[l][31-c]=0;
+            printf("0 ");
+        }
+        if(i==23||i==15||i==7){
+            l++;
+            c=31;
+            printf("\n");
+        }
+        else{
+            c--;
+        }
+    }
+    //Impressao da matriz M pelo jeito convencional.
+    printf("\n\n\n");
+    for(i=0;i<8;i++){
+        for(j=0;j<8;j++){
+            printf("%d ",M[i][j]);
+        }
+        printf("\n");
+    }
+    //Reconstrucao em inteiros.
+    int x1=0;
+    int x2=0;
+    int aux2=1;
+    for(i=0;i<4;i++){
+        for(j=0;j<8;j++){
+            x1=x1+M[i][j]*aux2;
+            aux2=aux2*2;
+        }
+    }
+    aux2=1;
+    for(i=4;i<8;i++){
+        for(j=0;j<8;j++){
+            x2=x2+M[i][j]*aux2;
+            aux2=aux2*2;
+        }
+    }
+    printf("os numeros recompostos sao %d e %d respectivamente: \n",x1,x2);
+    //Liberacao da memoria.
+    free(x[0]);
+    free(x);
+    return 0;
+}
+
+---------------------------------------------------------------------------
+
+
+COLOR.H
+#ifndef COLOR_H
+#define COLOR_H
+
+class color
+{
+    float r,g,b;
+public:
+    color(float mr=0,float mg=0,float mb=0);
+    ~color();
+    void print(void);
+    color combina(color c2);
+    bool compara(color c1);
+};
+#endif // COLOR_H
+
+COLOR.CPP
+#include "color.h"
+#include <iostream>
+
+using namespace std;
+
+color::color(float mr, float mg, float mb)
+{
+    r=mr;
+    g=mg;
+    b=mb;
+}
+
+color::~color()
+{
+
+}
+
+void color::print()
+{
+    cout<<"["<<r<<","<<g<<","<<b<<"]"<<endl;
+}
+
+color color::combina(color c2)
+{
+    color ret;
+    ret.r= (r + c2.r)/2;
+    ret.g=(g +c2.g)/2;
+    ret.b=(b +c2.b)/2;
+    return ret;
+}
+
+bool color::compara(color c1)
+{
+    if(r ==c1.r && g==c1.g && b==c1.b){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+MAIN.CPP
+#include <iostream>
+#include "color.h"
+
+using namespace std;
+
+int main()
+{
+    color c1(1,0,0),c2(1,1,0),c3;
+    c3=c1.combina(c2);
+    c3.print();
+    cout<<c1.compara(c2)<<endl;
+    cout<<c2.compara(c2)<<endl;
+    return 0;
+}
