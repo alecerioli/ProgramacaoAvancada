@@ -1,0 +1,246 @@
+\hypertarget{class_sculptor}{}\doxysection{Sculptor Class Reference}
+\label{class_sculptor}\index{Sculptor@{Sculptor}}
+
+
+A classe \mbox{\hyperlink{class_sculptor}{Sculptor}} eh uma classe que permite criar e modificar uma matriz 3D de \mbox{\hyperlink{struct_voxel}{Voxel}}.  
+
+
+
+
+{\ttfamily \#include $<$sculptor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sculptor_a014e3ef5517bf0e9d9e14486b6ac6433}{Sculptor}} (int \+\_\+nx, int \+\_\+ny, int \+\_\+nz)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sculptor}{Sculptor}} eh o construtor da classe \mbox{\hyperlink{class_sculptor}{Sculptor}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}{$\sim$\+Sculptor}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Sculptor eh o destrutor da classe \mbox{\hyperlink{class_sculptor}{Sculptor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_af1d69da01379874b0dfd6454787cb562}{set\+Color}} (float \mbox{\hyperlink{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}{r}}, float \mbox{\hyperlink{class_sculptor_a208c06af69a81a1568df4493868816f1}{g}}, float \mbox{\hyperlink{class_sculptor_a7aafd7305ea634252d8288b60536cd96}{b}}, float alpha)
+\begin{DoxyCompactList}\small\item\em set\+Color eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que define a cor atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}{put\+Voxel}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em put\+Voxel eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que ativa um voxel com coordenadas definidas e na cor atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cut\+Voxel}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em cut\+Voxel eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que desativa um voxel com coordenadas definidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a58cb72d22001a5034f15383ca983830c}{write\+O\+FF}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em write\+O\+FF eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que grava a matriz 3D de \mbox{\hyperlink{struct_voxel}{Voxel}} em um arquivo.\+off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_voxel}{Voxel}} $\ast$$\ast$$\ast$ \mbox{\hyperlink{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}{v}}
+\begin{DoxyCompactList}\small\item\em v \+: matriz 3D de Voxels alocada dinamicamente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}{nx}}
+\begin{DoxyCompactList}\small\item\em nx \+: dimensao de x. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}{ny}}
+\begin{DoxyCompactList}\small\item\em ny \+: dimensao de y. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}{nz}}
+\begin{DoxyCompactList}\small\item\em nz \+: dimensao de z. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}{r}}
+\begin{DoxyCompactList}\small\item\em r \+: intensidade da cor vermelha (entre 0 e 1). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sculptor_a208c06af69a81a1568df4493868816f1}{g}}
+\begin{DoxyCompactList}\small\item\em g \+: intensidade da cor verde (entre 0 e 1). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sculptor_a7aafd7305ea634252d8288b60536cd96}{b}}
+\begin{DoxyCompactList}\small\item\em b \+: intensidade da cor azul (entre 0 e 1). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}{a}}
+\begin{DoxyCompactList}\small\item\em a \+: intensidade da opacidade (entre 0 e 1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \mbox{\hyperlink{class_sculptor}{Sculptor}} eh uma classe que permite criar e modificar uma matriz 3D de \mbox{\hyperlink{struct_voxel}{Voxel}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sculptor_a014e3ef5517bf0e9d9e14486b6ac6433}\label{class_sculptor_a014e3ef5517bf0e9d9e14486b6ac6433}} 
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{Sculptor()}{Sculptor()}}
+{\footnotesize\ttfamily Sculptor\+::\+Sculptor (\begin{DoxyParamCaption}\item[{int}]{\+\_\+nx,  }\item[{int}]{\+\_\+ny,  }\item[{int}]{\+\_\+nz }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_sculptor}{Sculptor}} eh o construtor da classe \mbox{\hyperlink{class_sculptor}{Sculptor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nx} & \+: dimensao de x. \\
+\hline
+{\em \+\_\+ny} & \+: dimensao de y. \\
+\hline
+{\em \+\_\+nz} & \+: dimensao de z. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}\label{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}} 
+\index{Sculptor@{Sculptor}!````~Sculptor@{$\sim$Sculptor}}
+\index{````~Sculptor@{$\sim$Sculptor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sculptor()}{~Sculptor()}}
+{\footnotesize\ttfamily Sculptor\+::$\sim$\+Sculptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+$\sim$\+Sculptor eh o destrutor da classe \mbox{\hyperlink{class_sculptor}{Sculptor}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}\label{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}} 
+\index{Sculptor@{Sculptor}!cutVoxel@{cutVoxel}}
+\index{cutVoxel@{cutVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{cutVoxel()}{cutVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+cut\+Voxel eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que desativa um voxel com coordenadas definidas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: coordenada x. \\
+\hline
+{\em y} & \+: coordenada y. \\
+\hline
+{\em z} & \+: coordenada z. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}\label{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}} 
+\index{Sculptor@{Sculptor}!putVoxel@{putVoxel}}
+\index{putVoxel@{putVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{putVoxel()}{putVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+put\+Voxel eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que ativa um voxel com coordenadas definidas e na cor atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: coordenada x. \\
+\hline
+{\em y} & \+: coordenada y. \\
+\hline
+{\em z} & \+: coordenada z. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sculptor_af1d69da01379874b0dfd6454787cb562}\label{class_sculptor_af1d69da01379874b0dfd6454787cb562}} 
+\index{Sculptor@{Sculptor}!setColor@{setColor}}
+\index{setColor@{setColor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Sculptor\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{alpha }\end{DoxyParamCaption})}
+
+
+
+set\+Color eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que define a cor atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \+: intensidade da cor vermelha (entre 0 e 1). \\
+\hline
+{\em g} & \+: intensidade da cor verde (entre 0 e 1). \\
+\hline
+{\em b} & \+: intensidade da cor azul (entre 0 e 1). \\
+\hline
+{\em alpha} & \+: intensidade da opacidade (entre 0 e 1). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sculptor_a58cb72d22001a5034f15383ca983830c}\label{class_sculptor_a58cb72d22001a5034f15383ca983830c}} 
+\index{Sculptor@{Sculptor}!writeOFF@{writeOFF}}
+\index{writeOFF@{writeOFF}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{writeOFF()}{writeOFF()}}
+{\footnotesize\ttfamily void Sculptor\+::write\+O\+FF (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+write\+O\+FF eh um metodo da classe \mbox{\hyperlink{class_sculptor}{Sculptor}} que grava a matriz 3D de \mbox{\hyperlink{struct_voxel}{Voxel}} em um arquivo.\+off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \+: caminho do arquivo.\+off. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}\label{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}} 
+\index{Sculptor@{Sculptor}!a@{a}}
+\index{a@{a}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily float Sculptor\+::a\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+a \+: intensidade da opacidade (entre 0 e 1). 
+
+\mbox{\Hypertarget{class_sculptor_a7aafd7305ea634252d8288b60536cd96}\label{class_sculptor_a7aafd7305ea634252d8288b60536cd96}} 
+\index{Sculptor@{Sculptor}!b@{b}}
+\index{b@{b}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily float Sculptor\+::b\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+b \+: intensidade da cor azul (entre 0 e 1). 
+
+\mbox{\Hypertarget{class_sculptor_a208c06af69a81a1568df4493868816f1}\label{class_sculptor_a208c06af69a81a1568df4493868816f1}} 
+\index{Sculptor@{Sculptor}!g@{g}}
+\index{g@{g}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily float Sculptor\+::g\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+g \+: intensidade da cor verde (entre 0 e 1). 
+
+\mbox{\Hypertarget{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}\label{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}} 
+\index{Sculptor@{Sculptor}!nx@{nx}}
+\index{nx@{nx}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily int Sculptor\+::nx\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+nx \+: dimensao de x. 
+
+\mbox{\Hypertarget{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}\label{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}} 
+\index{Sculptor@{Sculptor}!ny@{ny}}
+\index{ny@{ny}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily int Sculptor\+::ny\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ny \+: dimensao de y. 
+
+\mbox{\Hypertarget{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}\label{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}} 
+\index{Sculptor@{Sculptor}!nz@{nz}}
+\index{nz@{nz}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{nz}{nz}}
+{\footnotesize\ttfamily int Sculptor\+::nz\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+nz \+: dimensao de z. 
+
+\mbox{\Hypertarget{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}\label{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}} 
+\index{Sculptor@{Sculptor}!r@{r}}
+\index{r@{r}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily float Sculptor\+::r\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+r \+: intensidade da cor vermelha (entre 0 e 1). 
+
+\mbox{\Hypertarget{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}\label{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}} 
+\index{Sculptor@{Sculptor}!v@{v}}
+\index{v@{v}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_voxel}{Voxel}}$\ast$$\ast$$\ast$ Sculptor\+::v\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+v \+: matriz 3D de Voxels alocada dinamicamente. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sculptor_8h}{sculptor.\+h}}\item 
+\mbox{\hyperlink{sculptor_8cpp}{sculptor.\+cpp}}\end{DoxyCompactItemize}
