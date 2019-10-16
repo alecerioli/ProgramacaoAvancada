@@ -1,0 +1,62 @@
+dim 100 100 100
+putbox 28 72 28 72 67 71 0.1 0.1 0.9 0.8
+putbox 34 66 34 66 71 82 0.1 0.1 0.9 0.3
+cutbox 36 64 36 64 71 82 
+putbox 36 64 36 64 71 82 0.9 0.9 0.1 0.5
+putsphere 50 50 50 25 0.9 0.8 0.6 0.1
+cutsphere 90 50 50 20
+cutsphere 10 50 50 20
+putvoxel 53 63 71 0.1 0.1 0.9 0.8
+putvoxel 52 63 71 0.1 0.1 0.9 0.8
+putvoxel 51 63 71 0.1 0.1 0.9 0.8
+putvoxel 50 63 71 0.1 0.1 0.9 0.8
+putvoxel 49 63 71 0.1 0.1 0.9 0.8
+putvoxel 48 63 71 0.1 0.1 0.9 0.8
+putvoxel 47 63 71 0.1 0.1 0.9 0.8
+putvoxel 63 47 71 0.1 0.1 0.9 0.8
+putvoxel 63 48 71 0.1 0.1 0.9 0.8
+putvoxel 63 49 71 0.1 0.1 0.9 0.8
+putvoxel 63 50 71 0.1 0.1 0.9 0.8
+putvoxel 63 51 71 0.1 0.1 0.9 0.8
+putvoxel 63 52 71 0.1 0.1 0.9 0.8
+putvoxel 63 53 71 0.1 0.1 0.9 0.8
+putvoxel 47 37 71 0.1 0.1 0.9 0.8
+putvoxel 48 37 71 0.1 0.1 0.9 0.8
+putvoxel 49 37 71 0.1 0.1 0.9 0.8
+putvoxel 50 37 71 0.1 0.1 0.9 0.8
+putvoxel 51 37 71 0.1 0.1 0.9 0.8
+putvoxel 52 37 71 0.1 0.1 0.9 0.8
+putvoxel 53 37 71 0.1 0.1 0.9 0.8
+putvoxel 37 53 71 0.1 0.1 0.9 0.8
+putvoxel 37 52 71 0.1 0.1 0.9 0.8
+putvoxel 37 51 71 0.1 0.1 0.9 0.8
+putvoxel 37 50 71 0.1 0.1 0.9 0.8
+putvoxel 37 49 71 0.1 0.1 0.9 0.8
+putvoxel 37 48 71 0.1 0.1 0.9 0.8
+putvoxel 37 47 71 0.1 0.1 0.9 0.8
+putvoxel 43 74 61 0.1 0.1 0.1 0.1
+putvoxel 42 74 61 0.1 0.1 0.1 0.1
+putvoxel 41 74 61 0.1 0.1 0.1 0.1
+putvoxel 41 74 60 0.1 0.1 0.1 0.1
+putvoxel 41 74 59 0.1 0.1 0.1 0.1
+putvoxel 42 74 59 0.1 0.1 0.1 0.1
+putvoxel 43 74 59 0.1 0.1 0.1 0.1
+putvoxel 43 74 60 0.1 0.1 0.1 0.1
+putvoxel 59 74 61 0.1 0.1 0.1 0.1
+putvoxel 58 74 61 0.1 0.1 0.1 0.1
+putvoxel 57 74 61 0.1 0.1 0.1 0.1
+putvoxel 57 74 60 0.1 0.1 0.1 0.1
+putvoxel 57 74 59 0.1 0.1 0.1 0.1
+putvoxel 58 74 59 0.1 0.1 0.1 0.1
+putvoxel 59 74 59 0.1 0.1 0.1 0.1
+putvoxel 59 74 60 0.1 0.1 0.1 0.1
+putellipsoid 42 71 60 4 3 4 0.9 0.9 0.9 0.9
+putellipsoid 58 71 60 4 3 4 0.9 0.9 0.9 0.9
+putsphere 50 77 50 6 0.9 0.1 0.1 0.3
+cutvoxel 42 74 60
+putvoxel 42 74 60 0.1 0.1 0.1 0.1
+cutvoxel 58 74 60 
+putvoxel 58 74 60 0.1 0.1 0.1 0.1
+cutellipsoid 50 68 39 14 5 4
+putellipsoid 50 68 39 14 5 4 0.3 0.9 0.3 0.9
+
