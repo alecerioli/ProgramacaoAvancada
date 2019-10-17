@@ -7,7 +7,7 @@ Trabalhos da materia Programação Avançada
 **Sobre o uso do Escultor_v2** :  
 
 -Crie um projeto;  
--Crie todas as classes (*headers* e *source*) copiando os codigos presentes na pasta do arquivo;  
+-Crie todas as classes (*headers* e *source*) copiando os codigos presentes na pasta *Escultor_v2*;  
      -OBS: O arquivo *Voxel* é apenas *header* :  
      
       #ifndef VOXEL_H
