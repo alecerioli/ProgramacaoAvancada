@@ -2,7 +2,8 @@
 Trabalhos da materia Programação Avançada
   
     
-    
+  
+  
 **Sobre o uso do Escultor_v2** :  
 
 -Crie um projeto;  
@@ -41,7 +42,7 @@ Trabalhos da materia Programação Avançada
         
 -Uma vez copiada todas as classes, copie o arquivo *main* :  
 
-     `#include <iostream>
+     #include <iostream>
      #include "figurageometrica.h"
      #include "cutbox.h"
      #include "cutellipsoid.h"
@@ -62,8 +63,12 @@ Trabalhos da materia Programação Avançada
      Sculptor t=tt.Read("C:/Users/User/Documents/entrada1.txt");
      t.writeOFF("C:/Users/User/Documents/saida1.off");
      return 0;
-     }`
-      
+     }  
+   
+-Antes de compilar, salve o arquivo *entrada1.txt* e guarde seu endereço;  
+-Na *main*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo, além de escolher um endereço onde quiser guardar o arquivo de saida;  
+-Compile e use o programa *Meshlab* para visualizar a escultura;
+ 
 
 
 
