@@ -40,7 +40,7 @@ Trabalhos da materia Programação Avançada
       };
       #endif // VOXEL_H    
         
--Uma vez copiada todas as classes, copie o arquivo *main* :  
+-Uma vez copiadas todas as classes, copie o arquivo *main.cpp* :  
 
      #include <iostream>
      #include "figurageometrica.h"
@@ -66,8 +66,8 @@ Trabalhos da materia Programação Avançada
      }  
    
 -Antes de compilar, salve o arquivo *entrada1.txt* e guarde seu endereço;  
--Na *main*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo, além de escolher um endereço onde quiser guardar o arquivo de saida;  
--Compile e use o programa *Meshlab* para visualizar a escultura;
+-Na *main.cpp*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo, além de escolher um endereço onde será guardado o arquivo de saida;  
+-Compile e use o programa *Meshlab* para abrir o arquivo de saida e visualizar a escultura;
  
 
 
