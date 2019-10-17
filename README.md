@@ -66,7 +66,8 @@ Trabalhos da materia Programação Avançada
      }  
    
 -Antes de compilar, salve o arquivo *entrada1.txt* e guarde seu endereço;  
--Na *main.cpp*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo, além de escolher um endereço onde será guardado o arquivo de saida;  
+-Na *main.cpp*, como parametro da função *Read*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo  
+-Além disso, escolher um endereço onde será guardado o arquivo de saida como parametro da função *t.writeOFF*;   
 -Compile e use o programa *Meshlab* para abrir o arquivo de saida e visualizar a escultura;
  
 
