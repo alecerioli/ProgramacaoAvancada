@@ -15,15 +15,91 @@ MainWindow::MainWindow(QWidget *parent) :
             &QAction::triggered,
             this,
             &MainWindow::finaliza);
+
     connect(ui->actionDimensoes,
             &QAction::triggered,
             this,
             &MainWindow::dimensoes);
-  /*  connect(ui->actionPutVoxel,
+
+    connect(ui->horizontalSliderProf,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getProf);
+
+    connect(ui->horizontalSliderRaio,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getRaioEsfera);
+
+    connect(ui->horizontalSliderRaioX,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getRaioXElipsoide);
+
+    connect(ui->horizontalSliderRaioY,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getRaioYElipsoide);
+
+    connect(ui->horizontalSliderRaioZ,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getRaioZElipsoide);
+
+    connect(ui->horizontalSliderLarg,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getLarguraCaixa);
+
+    connect(ui->horizontalSliderAlt,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getAlturaCaixa);
+
+    connect(ui->horizontalSliderEsp,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getEspessuraCaixa);
+
+    connect(ui->actionPutVoxel,
             &QAction::triggered,
             ui->widget,
-           &Plotter::putVoxel);
-           */
+            &Plotter::colocaVoxel);
+
+    connect(ui->actionCutVoxel,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::retiraVoxel);
+
+    connect(ui->actionPutSphere,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::colocaEsfera);
+
+    connect(ui->actionCutSphere,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::retiraEsfera);
+
+    connect(ui->actionPutEllipsoid,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::colocaElipsoide);
+
+    connect(ui->actionCutEllipsoid,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::retiraElipsoide);
+
+    connect(ui->actionPutBox,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::colocaCaixa);
+
+    connect(ui->actionCutBox,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::retiraCaixa);
 }
 
 MainWindow::~MainWindow()

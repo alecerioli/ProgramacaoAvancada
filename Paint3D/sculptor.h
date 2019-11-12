@@ -1,14 +1,11 @@
 #ifndef VOXEL_H
 #define VOXEL_H
-
-
 struct Voxel {
     float r,g,b; // Colors
     float a;
     // Transparency
     bool isOn; // Included or not
 };
-
 #endif // VOXEL_H
 
 
@@ -17,8 +14,6 @@ struct Voxel {
 #define SCULPTOR_H
 #include <string>
 #include <iostream>
-
-
 class Sculptor {
 protected:
     Voxel ***v;
@@ -39,5 +34,4 @@ public:
     void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     void writeOFF(char *filename);
 };
-
 #endif // SCULPTOR_H
