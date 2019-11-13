@@ -11,9 +11,10 @@ class Plotter : public QWidget
     Q_OBJECT
 private:
     int dimX,dimY,dimZ;
-    int raio,raioX,raioY,raioZ,meia_largura,meia_altura;
+    int raio,raioX,raioY,raioZ,meia_largura,meia_altura,meia_espessura;
     int posX,posY,posZ;
-    int altura,largura,espessura;
+    int posXreal,posYreal;
+    int altura,largura;
     Sculptor *escultor;
     QString prox_acao;
     QColor cor;

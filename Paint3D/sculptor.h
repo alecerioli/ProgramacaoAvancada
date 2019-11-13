@@ -15,7 +15,7 @@ struct Voxel {
 #include <string>
 #include <iostream>
 class Sculptor {
-protected:
+public:
     Voxel ***v;
     // 3D matrix
     int nx,ny,nz; // Dimensions

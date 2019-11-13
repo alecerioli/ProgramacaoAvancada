@@ -17,6 +17,7 @@ Plotter::Plotter(QWidget *parent) : QWidget(parent)
     dimX=30;
     dimY=30;
     dimZ=30;
+    posZ=0;
     prox_acao="";
     escultor = new Sculptor(dimX,dimY,dimZ);
     setMouseTracking(true);
@@ -57,6 +58,23 @@ void Plotter::paintEvent(QPaintEvent *event){
     for (int i=1;i<=dimY;i++){
         painter.drawLine(i*largura,0,i*largura,height());
     }
+    // Voxel pintados
+    for(int i=0;i<dimX;i++){
+        for(int j=0;j<dimY;j++){
+            for(int k=0;k<dimZ;k++){
+                if(escultor->v[i][j][k].isOn==true){
+                    brush.setColor(QColor(0,0,0));
+                    brush.setStyle(Qt::SolidPattern);
+                    pen.setColor(QColor(0,0,0));
+                    pen.setStyle(Qt::SolidLine);
+                    painter.setPen(pen);
+                    painter.setBrush(brush);
+                    painter.drawRect((i-1)*largura,(j-1)*altura,i*largura,j*altura);
+                    repaint();
+                }
+            }
+        }
+    }
 }
 
 
@@ -69,6 +87,8 @@ void Plotter::mousePressEvent(QMouseEvent *event)
     qDebug() << event->button();
     emit mouseX(x);
     emit mouseY(y);
+    posXreal=x;
+    posYreal=y;
     posX=x/altura;
     posY=y/largura;
     //escultor->setColor()
@@ -91,10 +111,10 @@ void Plotter::mousePressEvent(QMouseEvent *event)
         escultor->cutEllipsoid(posX,posY,posZ,raioX,raioY,raioZ);
     }
     if(prox_acao=="putbox"){
-        escultor->putBox(posX-largura,posX+largura,posY-altura,posY+altura,posZ-espessura,posZ+espessura);
+        escultor->putBox(posX-meia_largura,posX+meia_largura,posY-meia_altura,posY+meia_altura,posZ-meia_espessura,posZ+meia_espessura);
     }
     if(prox_acao=="cutbox"){
-        escultor->cutBox(posX-largura,posX+largura,posY-altura,posY+altura,posZ-espessura,posZ+espessura);
+        escultor->cutBox(posX-meia_largura,posX+meia_largura,posY-meia_altura,posY+meia_altura,posZ-meia_espessura,posZ+meia_espessura);
     }
 }
 
@@ -138,60 +158,67 @@ void Plotter::getRaioZElipsoide(int raiozAtual)
     raioZ=raiozAtual;
 }
 
-
 void Plotter::getLarguraCaixa(int largAtual)
 {
-    largura=largAtual;
+    meia_largura=largAtual;
 }
 
 void Plotter::getAlturaCaixa(int altAtual)
 {
-    altura=altAtual;
+    meia_altura=altAtual;
 }
 
 void Plotter::getEspessuraCaixa(int espAtual)
 {
-    espessura=espAtual;
+    meia_espessura=espAtual;
 }
 
 void Plotter::colocaVoxel()
 {
     prox_acao="putvoxel";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::retiraVoxel()
 {
     prox_acao="cutvoxel";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::colocaEsfera()
 {
     prox_acao="putsphere";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::retiraEsfera()
 {
     prox_acao="cutsphere";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::colocaElipsoide()
 {
     prox_acao="putellipsoid";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::retiraElipsoide()
 {
     prox_acao="cutellipsoid";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::colocaCaixa()
 {
     prox_acao="putbox";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::retiraCaixa()
 {
     prox_acao="cutbox";
+    qDebug() <<prox_acao;
 }
 
 void Plotter::mostraMensagem()
