@@ -21,6 +21,21 @@ MainWindow::MainWindow(QWidget *parent) :
             this,
             &MainWindow::dimensoes);
 
+    connect(ui->horizontalSliderR,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getCorVermelha);
+
+    connect(ui->horizontalSliderG,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getCorVerde);
+
+    connect(ui->horizontalSliderB,
+            &QAbstractSlider::valueChanged,
+            ui->widget,
+            &Plotter::getCorAzul);
+
     connect(ui->horizontalSliderProf,
             &QAbstractSlider::valueChanged,
             ui->widget,

@@ -14,11 +14,12 @@ using namespace std;
 
 Plotter::Plotter(QWidget *parent) : QWidget(parent)
 {
-    dimX=30;
-    dimY=30;
-    dimZ=30;
-    posZ=0;
+    dimX=dimY=dimZ=30;
     prox_acao="";
+    raio=raioX=raioY=raioZ=0;
+    meia_altura=meia_largura=meia_espessura=0;
+    posZ=0;
+    timerid = startTimer(10);
     escultor = new Sculptor(dimX,dimY,dimZ);
     setMouseTracking(true);
     actionMessage = new QAction(this);
@@ -61,17 +62,18 @@ void Plotter::paintEvent(QPaintEvent *event){
     // Voxel pintados
     for(int i=0;i<dimX;i++){
         for(int j=0;j<dimY;j++){
-            for(int k=0;k<dimZ;k++){
-                if(escultor->v[i][j][k].isOn==true){
-                    brush.setColor(QColor(0,0,0));
-                    brush.setStyle(Qt::SolidPattern);
-                    pen.setColor(QColor(0,0,0));
-                    pen.setStyle(Qt::SolidLine);
-                    painter.setPen(pen);
-                    painter.setBrush(brush);
-                    painter.drawRect((i-1)*largura,(j-1)*altura,i*largura,j*altura);
-                    repaint();
-                }
+            if(escultor->v[i][j][posZ].isOn==true){
+                int pos_linha = i*altura;
+                int pos_coluna = j*largura;
+                float cor_r=(escultor->v[i][j][posZ].r)*255.0;
+                float cor_g=(escultor->v[i][j][posZ].g)*255.0;
+                float cor_b=(escultor->v[i][j][posZ].b)*255.0;
+                brush.setColor(QColor(211, 215, 207));
+                painter.setBrush(brush);
+                painter.drawRect(pos_coluna,pos_linha,largura,altura);
+                brush.setColor(QColor(cor_r,cor_g,cor_b));
+                painter.setBrush(brush);
+                painter.drawEllipse(pos_coluna,pos_linha,largura,altura);
             }
         }
     }
@@ -87,11 +89,9 @@ void Plotter::mousePressEvent(QMouseEvent *event)
     qDebug() << event->button();
     emit mouseX(x);
     emit mouseY(y);
-    posXreal=x;
-    posYreal=y;
-    posX=x/altura;
-    posY=y/largura;
-    //escultor->setColor()
+    posY=x/largura;
+    posX=y/altura;
+    escultor->setColor(cor.red()/255,cor.green()/255,cor.blue()/255,1);
     if(prox_acao=="putvoxel"){
         escultor->putVoxel(posX,posY,posZ);
     }
@@ -104,10 +104,10 @@ void Plotter::mousePressEvent(QMouseEvent *event)
     if(prox_acao=="cutsphere"){
         escultor->cutSphere(posX,posY,posZ,raio);
     }
-    if(prox_acao=="putelipsoide"){
+    if(prox_acao=="putellipsoid"){
         escultor->putEllipsoid(posX,posY,posZ,raioX,raioY,raioZ);
     }
-    if(prox_acao=="cutelipsoide"){
+    if(prox_acao=="cutellipsoid"){
         escultor->cutEllipsoid(posX,posY,posZ,raioX,raioY,raioZ);
     }
     if(prox_acao=="putbox"){
@@ -124,6 +124,13 @@ void Plotter::contextMenuEvent(QContextMenuEvent *event)
     QMenu menu;
     menu.addAction(actionMessage);
     menu.exec(event->globalPos());
+}
+
+void Plotter::timerEvent(QTimerEvent *event)
+{
+    int id;
+    id = event->timerId();
+    repaint();
 }
 
 void Plotter::setDimensoes(int x, int y, int z)
@@ -171,6 +178,21 @@ void Plotter::getAlturaCaixa(int altAtual)
 void Plotter::getEspessuraCaixa(int espAtual)
 {
     meia_espessura=espAtual;
+}
+
+void Plotter::getCorVermelha(int redAtual)
+{
+    cor.setRed(redAtual);
+}
+
+void Plotter::getCorVerde(int greenAtual)
+{
+    cor.setGreen(greenAtual);
+}
+
+void Plotter::getCorAzul(int blueAtual)
+{
+    cor.setBlue(blueAtual);
 }
 
 void Plotter::colocaVoxel()

@@ -95,7 +95,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QSlider" name="horizontalSliderRaioX">
+                 <widget class="QSlider" name="horizontalSliderRaioY">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -120,7 +120,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QSlider" name="horizontalSliderRaioY">
+                 <widget class="QSlider" name="horizontalSliderRaioX">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -183,7 +183,7 @@
                 <item>
                  <widget class="QLabel" name="label_7">
                   <property name="text">
-                   <string>Meia L.</string>
+                   <string>Meia H.</string>
                   </property>
                  </widget>
                 </item>
@@ -208,7 +208,7 @@
                 <item>
                  <widget class="QLabel" name="label_8">
                   <property name="text">
-                   <string>Meia H.</string>
+                   <string>Meia L.</string>
                   </property>
                  </widget>
                 </item>
@@ -282,6 +282,9 @@
                 </item>
                 <item>
                  <widget class="QSlider" name="horizontalSliderR">
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -307,6 +310,9 @@
                 </item>
                 <item>
                  <widget class="QSlider" name="horizontalSliderG">
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -332,6 +338,9 @@
                 </item>
                 <item>
                  <widget class="QSlider" name="horizontalSliderB">
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -548,7 +557,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>horizontalSliderRaioX</sender>
+   <sender>horizontalSliderRaioY</sender>
    <signal>valueChanged(int)</signal>
    <receiver>lcdNumber</receiver>
    <slot>display(int)</slot>
@@ -564,7 +573,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>horizontalSliderRaioY</sender>
+   <sender>horizontalSliderRaioX</sender>
    <signal>valueChanged(int)</signal>
    <receiver>lcdNumber_2</receiver>
    <slot>display(int)</slot>

@@ -13,8 +13,8 @@ private:
     int dimX,dimY,dimZ;
     int raio,raioX,raioY,raioZ,meia_largura,meia_altura,meia_espessura;
     int posX,posY,posZ;
-    int posXreal,posYreal;
-    int altura,largura;
+    double altura,largura;
+    int timerid;
     Sculptor *escultor;
     QString prox_acao;
     QColor cor;
@@ -25,6 +25,7 @@ public:
     void paintEvent(QPaintEvent *event);
     void mousePressEvent(QMouseEvent *event);
     void contextMenuEvent(QContextMenuEvent *event);
+    void timerEvent(QTimerEvent *event);
     void setDimensoes(int x, int y, int z);
     void getProf(int zAtual);
     void getRaioEsfera(int raioAtual);
@@ -34,6 +35,9 @@ public:
     void getLarguraCaixa(int largAtual);
     void getAlturaCaixa(int altAtual);
     void getEspessuraCaixa(int espAtual);
+    void getCorVermelha(int redAtual);
+    void getCorVerde(int greenAtual);
+    void getCorAzul(int blueAtual);
     void colocaVoxel();
     void retiraVoxel();
     void colocaEsfera();

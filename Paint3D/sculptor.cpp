@@ -101,10 +101,10 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
     double d;
-    for(int i=0; i<nz; i++){
-        for (int j=0; j<nx; j++) {
-            for (int k=0; k<ny; k++){
-                d = pow(j-xcenter,2) + pow(k-ycenter,2) + pow(i-zcenter,2);
+    for(int i=0; i<nx; i++){
+        for (int j=0; j<ny; j++) {
+            for (int k=0; k<nz; k++){
+                d = pow(i-xcenter,2) + pow(j-ycenter,2) + pow(k-zcenter,2);
                 if (d <= pow(radius,2)){
                     v[i][j][k].isOn=true;
                     v[i][j][k].r=r;
@@ -120,10 +120,10 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
     double d;
-    for(int i=0; i<nz; i++){
-        for (int j=0; j<nx; j++) {
-            for (int k=0; k<ny; k++){
-                d = pow(j-xcenter,2) + pow(k-ycenter,2) + pow(i-zcenter,2);
+    for(int i=0; i<nx; i++){
+        for (int j=0; j<ny; j++) {
+            for (int k=0; k<nz; k++){
+                d = pow(i-xcenter,2) + pow(j-ycenter,2) + pow(k-zcenter,2);
                 if (d <= pow(radius,2)){
                     v[i][j][k].isOn=false;
                 }
@@ -135,10 +135,10 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
 {
     double d;
-    for(int i=0; i<nz; i++){
-        for (int j=0; j<nx; j++) {
-            for (int k=0; k<ny; k++){
-                d = pow(j-xcenter,2)/pow(rx,2) + pow(k-ycenter,2)/pow(ry,2) + pow(i-zcenter,2)/pow(rz,2);
+    for(int i=0; i<nx; i++){
+        for (int j=0; j<ny; j++) {
+            for (int k=0; k<nz; k++){
+                d = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry,2) + pow(k-zcenter,2)/pow(rz,2);
                 if (d <= 1){
                     v[i][j][k].isOn=true;
                     v[i][j][k].r=r;
@@ -154,10 +154,10 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
 {
     double d;
-    for(int i=0; i<nz; i++){
-        for (int j=0; j<nx; j++) {
-            for (int k=0; k<ny; k++){
-                d = pow(j-xcenter,2)/pow(rx,2) + pow(k-ycenter,2)/pow(ry,2) + pow(i-zcenter,2)/pow(rz,2);
+    for(int i=0; i<nx; i++){
+        for (int j=0; j<ny; j++) {
+            for (int k=0; k<nz; k++){
+                d = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry,2) + pow(k-zcenter,2)/pow(rz,2);
                 if (d <= 1){
                     v[i][j][k].isOn=false;
                 }
