@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QAction>
 #include <QColor>
+#include <cstring>
 #include "sculptor.h"
 
 class Plotter : public QWidget
@@ -15,6 +16,7 @@ private:
     int posX,posY,posZ;
     double altura,largura;
     int timerid;
+    std::string filename;
     Sculptor *escultor;
     QString prox_acao;
     QColor cor;
@@ -28,6 +30,9 @@ public:
     void timerEvent(QTimerEvent *event);
     void setDimensoes(int x, int y, int z);
     void salva();
+    void novo();
+    void outrasCores();
+    //void abrirComMeshLab();
     void getProf(int zAtual);
     void getRaioEsfera(int raioAtual);
     void getRaioXElipsoide(int raioxAtual);

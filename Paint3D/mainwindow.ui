@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>781</width>
-    <height>574</height>
+    <width>807</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,50 +18,46 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_6" stretch="90,10">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="70,30">
+       <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="70,30">
         <item>
          <widget class="Plotter" name="widget" native="true"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-            <item>
-             <widget class="Line" name="line_4">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
+           <widget class="Line" name="line_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <widget class="QLabel" name="label_6">
               <property name="text">
-               <string>                             Esfera</string>
+               <string>                               Esfera</string>
               </property>
              </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_7">
-                <item>
-                 <widget class="QLabel" name="label_5">
-                  <property name="text">
-                   <string>Raio   </string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderRaio">
-                  <property name="maximum">
-                   <number>49</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Raio   </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderRaio">
+                <property name="maximum">
+                 <number>49</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_4"/>
@@ -71,43 +67,39 @@
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="Line" name="line_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
              <widget class="QLabel" name="label_4">
               <property name="text">
-               <string>                            Elipsoide</string>
+               <string>                              Elipsoide</string>
               </property>
              </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout">
-                <item>
-                 <widget class="QLabel" name="label">
-                  <property name="text">
-                   <string> Raio x</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderRaioY">
-                  <property name="maximum">
-                   <number>49</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string> Raio X</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderRaioY">
+                <property name="maximum">
+                 <number>49</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber"/>
@@ -115,27 +107,23 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_2">
-                <item>
-                 <widget class="QLabel" name="label_2">
-                  <property name="text">
-                   <string> Raio y</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderRaioX">
-                  <property name="maximum">
-                   <number>49</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string> Raio Y</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderRaioX">
+                <property name="maximum">
+                 <number>49</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_2"/>
@@ -143,27 +131,23 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
-                <item>
-                 <widget class="QLabel" name="label_3">
-                  <property name="text">
-                   <string> Raio z</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderRaioZ">
-                  <property name="maximum">
-                   <number>49</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string> Raio Z</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderRaioZ">
+                <property name="maximum">
+                 <number>49</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_3"/>
@@ -180,36 +164,32 @@
            </widget>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
              <widget class="QLabel" name="label_9">
               <property name="text">
-               <string>                              Caixa</string>
+               <string>                               Caixa</string>
               </property>
              </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_8">
-                <item>
-                 <widget class="QLabel" name="label_7">
-                  <property name="text">
-                   <string>Meia H.</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderLarg">
-                  <property name="maximum">
-                   <number>49</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Meia H.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderLarg">
+                <property name="maximum">
+                 <number>49</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_5"/>
@@ -217,27 +197,23 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_10">
-                <item>
-                 <widget class="QLabel" name="label_8">
-                  <property name="text">
-                   <string>Meia L.</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderAlt">
-                  <property name="maximum">
-                   <number>49</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Meia L.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderAlt">
+                <property name="maximum">
+                 <number>49</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_6"/>
@@ -245,27 +221,23 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_22">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_19">
-                <item>
-                 <widget class="QLabel" name="label_15">
-                  <property name="text">
-                   <string>Meia E.</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderEsp">
-                  <property name="maximum">
-                   <number>49</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string>Meia E.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderEsp">
+                <property name="maximum">
+                 <number>49</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_11"/>
@@ -286,32 +258,28 @@
             <item>
              <widget class="QLabel" name="label_10">
               <property name="text">
-               <string>                                Cor</string>
+               <string>                                  Cor</string>
               </property>
              </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_13">
-                <item>
-                 <widget class="QLabel" name="label_11">
-                  <property name="text">
-                   <string>Verm.</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderR">
-                  <property name="maximum">
-                   <number>255</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Verm.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderR">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_7"/>
@@ -319,27 +287,23 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_15">
-                <item>
-                 <widget class="QLabel" name="label_12">
-                  <property name="text">
-                   <string> Verd.</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderG">
-                  <property name="maximum">
-                   <number>255</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string> Verd.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderG">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_8"/>
@@ -347,32 +311,35 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_18">
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_17">
-                <item>
-                 <widget class="QLabel" name="label_13">
-                  <property name="text">
-                   <string> Azul. </string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSlider" name="horizontalSliderB">
-                  <property name="maximum">
-                   <number>255</number>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string> Azul. </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSliderB">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLCDNumber" name="lcdNumber_9"/>
               </item>
              </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonCores">
+              <property name="text">
+               <string>Outras cores</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -388,27 +355,23 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_21">
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_20">
-          <item>
-           <widget class="QLabel" name="label_14">
-            <property name="text">
-             <string>Profundidade</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSlider" name="horizontalSliderProf">
-            <property name="maximum">
-             <number>49</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Profundidade</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="horizontalSliderProf">
+          <property name="maximum">
+           <number>49</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLCDNumber" name="lcdNumber_10"/>
@@ -424,7 +387,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>781</width>
+     <width>807</width>
      <height>21</height>
     </rect>
    </property>
@@ -434,6 +397,7 @@
     </property>
     <addaction name="actionQuit"/>
     <addaction name="actionSave"/>
+    <addaction name="actionNew"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -444,6 +408,9 @@
    <addaction name="menuEdit"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -453,6 +420,8 @@
    <addaction name="actionQuit"/>
    <addaction name="separator"/>
    <addaction name="actionDimensoes"/>
+   <addaction name="separator"/>
+   <addaction name="actionMeshLab"/>
    <addaction name="separator"/>
    <addaction name="actionPutVoxel"/>
    <addaction name="separator"/>
@@ -494,8 +463,8 @@
   </action>
   <action name="actionPutSphere">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/putsphere.svg</normaloff>:/icons/putsphere.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/putsphere.svg</normaloff>:/icons/resources/putsphere.svg</iconset>
    </property>
    <property name="text">
     <string>PutSphere</string>
@@ -503,8 +472,8 @@
   </action>
   <action name="actionCutSphere">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/cutsphere.svg</normaloff>:/icons/cutsphere.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/cutsphere.svg</normaloff>:/icons/resources/cutsphere.svg</iconset>
    </property>
    <property name="text">
     <string>CutSphere</string>
@@ -512,8 +481,8 @@
   </action>
   <action name="actionPutVoxel">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/putvoxel.svg</normaloff>:/icons/putvoxel.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/putvoxel.svg</normaloff>:/icons/resources/putvoxel.svg</iconset>
    </property>
    <property name="text">
     <string>PutVoxel</string>
@@ -521,8 +490,8 @@
   </action>
   <action name="actionCutVoxel">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/cutvoxel.svg</normaloff>:/icons/cutvoxel.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/cutvoxel.svg</normaloff>:/icons/resources/cutvoxel.svg</iconset>
    </property>
    <property name="text">
     <string>CutVoxel</string>
@@ -530,8 +499,8 @@
   </action>
   <action name="actionPutBox">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/putbox.svg</normaloff>:/icons/putbox.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/putbox.svg</normaloff>:/icons/resources/putbox.svg</iconset>
    </property>
    <property name="text">
     <string>PutBox</string>
@@ -539,8 +508,8 @@
   </action>
   <action name="actionCutBox">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/cutbox.svg</normaloff>:/icons/cutbox.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/cutbox.svg</normaloff>:/icons/resources/cutbox.svg</iconset>
    </property>
    <property name="text">
     <string>CutBox</string>
@@ -548,8 +517,8 @@
   </action>
   <action name="actionPutEllipsoid">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/putellipsoid.svg</normaloff>:/icons/putellipsoid.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/putellipsoid.svg</normaloff>:/icons/resources/putellipsoid.svg</iconset>
    </property>
    <property name="text">
     <string>PutEllipsoid</string>
@@ -557,23 +526,30 @@
   </action>
   <action name="actionCutEllipsoid">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/cutellipsoid.svg</normaloff>:/icons/cutellipsoid.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/cutellipsoid.svg</normaloff>:/icons/resources/cutellipsoid.svg</iconset>
    </property>
    <property name="text">
     <string>CutEllipsoid</string>
    </property>
   </action>
   <action name="actionSave">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/icons/salvar.svg</normaloff>:/icons/salvar.svg</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/resources/salvar.svg</normaloff>:/icons/resources/salvar.svg</iconset>
    </property>
    <property name="text">
     <string>Save</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionMeshLab">
+   <property name="text">
+    <string>MeshLab</string>
    </property>
   </action>
  </widget>

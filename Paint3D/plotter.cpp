@@ -9,6 +9,7 @@
 #include <QMenu>
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QColorDialog>
 #include "sculptor.h"
 
 using namespace std;
@@ -144,10 +145,28 @@ void Plotter::setDimensoes(int x, int y, int z)
 void Plotter::salva()
 {
     QString nomeArquivo = QFileDialog::getSaveFileName(this, tr("Save"),"",tr("(*.off);;All Files (*)"));
+    filename = nomeArquivo.toStdString();
     if (nomeArquivo.compare("")){
-        escultor->writeOFF(nomeArquivo.toStdString());
+        escultor->writeOFF(filename);
     }
 }
+
+void Plotter::novo()
+{
+    escultor = new Sculptor(dimX,dimY,dimZ);
+}
+
+void Plotter::outrasCores()
+{
+    QColorDialog cor;
+    cor.exec();
+    qDebug()<< cor.getColor().red();
+}
+
+/*void Plotter::abrirComMeshLab()
+{
+
+}*/
 
 void Plotter::getProf(int zAtual)
 {

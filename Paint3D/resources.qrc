@@ -1,6 +1,15 @@
 <RCC>
     <qresource prefix="/icons">
         <file alias="Morreu">resources/morreu.svg</file>
+        <file>resources/salvar.svg</file>
+        <file>resources/cutbox.svg</file>
+        <file>resources/cutellipsoid.svg</file>
+        <file>resources/cutsphere.svg</file>
+        <file>resources/cutvoxel.svg</file>
+        <file>resources/putbox.svg</file>
+        <file>resources/putellipsoid.svg</file>
+        <file>resources/putsphere.svg</file>
+        <file>resources/putvoxel.svg</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

@@ -26,6 +26,21 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->widget,
             &Plotter::salva);
 
+    connect(ui->actionNew,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::novo);
+
+    connect(ui->pushButtonCores,
+            &QPushButton::pressed,
+            ui->widget,
+            &Plotter::outrasCores);
+
+    /*connect(ui->actionMeshLab,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::abrirComMeshLab);*/
+
     connect(ui->horizontalSliderR,
             &QAbstractSlider::valueChanged,
             ui->widget,
@@ -141,6 +156,14 @@ void MainWindow::dimensoes()
         y = d.getY();
         z = d.getZ();
         ui->widget->setDimensoes(x,y,z);
+        ui->horizontalSliderProf->setMaximum(z-1);
+        ui->horizontalSliderRaio->setMaximum(x-1);
+        ui->horizontalSliderRaioX->setMaximum(x/2-1);
+        ui->horizontalSliderRaioY->setMaximum(y/2-1);
+        ui->horizontalSliderRaioZ->setMaximum(z/2-1);
+        ui->horizontalSliderAlt->setMaximum(y/2-1);
+        ui->horizontalSliderLarg->setMaximum(x/2-1);
+        ui->horizontalSliderEsp->setMaximum(z/2-1);
     }
 }
 
