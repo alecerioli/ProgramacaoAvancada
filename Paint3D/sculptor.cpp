@@ -74,9 +74,9 @@ void Sculptor::cutVoxel(int x, int y, int z)
 
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
-    for(int i=x0;i<x1;i++){
-        for(int j=y0;j<y1;j++){
-            for(int k=z0;k<z1;k++){
+    for(int i=x0;i<=x1;i++){
+        for(int j=y0;j<=y1;j++){
+            for(int k=z0;k<=z1;k++){
                 v[i][j][k].isOn=true;
                 v[i][j][k].r=r;
                 v[i][j][k].g=g;
@@ -89,9 +89,9 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 
 void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
-    for(int i=x0;i<x1;i++){
-        for(int j=y0;j<y1;j++){
-            for(int k=z0;k<z1;k++){
+    for(int i=x0;i<=x1;i++){
+        for(int j=y0;j<=y1;j++){
+            for(int k=z0;k<=z1;k++){
                 v[i][j][k].isOn=false;
             }
         }
@@ -166,7 +166,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
 }
 
-void Sculptor::writeOFF(char *filename)
+void Sculptor::writeOFF(std:: string filename)
 {
     ofstream fout;
     int vertices=0;
@@ -180,9 +180,9 @@ void Sculptor::writeOFF(char *filename)
         exit(0);
     }
     fout<<"OFF"<<endl;
-    for (int i=0;i<nz;i++) {
-        for (int j=0;j<nx;j++) {
-            for(int k=0;k<ny;k++){
+    for (int i=0;i<nx;i++) {
+        for (int j=0;j<ny;j++) {
+            for(int k=0;k<nz;k++){
                 if(v[i][j][k].isOn == true){
                     vertices=vertices+8;
                     faces=faces+6;
@@ -191,9 +191,9 @@ void Sculptor::writeOFF(char *filename)
         }
     }
     fout<<vertices<<" "<<faces<<" 0"<<endl;
-    for (int i=0;i<nz;i++) {
-        for (int j=0;j<nx;j++) {
-            for(int k=0;k<ny;k++){
+    for (int i=0;i<nx;i++) {
+        for (int j=0;j<ny;j++) {
+            for(int k=0;k<nz;k++){
                 if(v[i][j][k].isOn == true){
                     fout<<i-0.5<<" "<<j+0.5<<" "<<k-0.5<<endl;
                     fout<<i-0.5<<" "<<j-0.5<<" "<<k-0.5<<endl;
@@ -208,9 +208,9 @@ void Sculptor::writeOFF(char *filename)
         }
     }
     int aux=0;
-    for (int i=0;i<nz;i++) {
-        for (int j=0;j<nx;j++) {
-            for(int k=0;k<ny;k++){
+    for (int i=0;i<nx;i++) {
+        for (int j=0;j<ny;j++) {
+            for(int k=0;k<nz;k++){
                 if(v[i][j][k].isOn == true){
                     fout<<"4 "<< aux<< " "<< aux +3<<" "<< aux+2 <<" "<< aux+1;
                     fout<<" "<<v[i][j][k].r <<" "<< v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;

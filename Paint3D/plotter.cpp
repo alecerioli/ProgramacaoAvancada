@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QMenu>
 #include <QMessageBox>
+#include <QFileDialog>
 #include "sculptor.h"
 
 using namespace std;
@@ -65,9 +66,9 @@ void Plotter::paintEvent(QPaintEvent *event){
             if(escultor->v[i][j][posZ].isOn==true){
                 int pos_linha = i*altura;
                 int pos_coluna = j*largura;
-                float cor_r=(escultor->v[i][j][posZ].r)*255.0;
-                float cor_g=(escultor->v[i][j][posZ].g)*255.0;
-                float cor_b=(escultor->v[i][j][posZ].b)*255.0;
+                int cor_r=(escultor->v[i][j][posZ].r)*255.0;
+                int cor_g=(escultor->v[i][j][posZ].g)*255.0;
+                int cor_b=(escultor->v[i][j][posZ].b)*255.0;
                 brush.setColor(QColor(211, 215, 207));
                 painter.setBrush(brush);
                 painter.drawRect(pos_coluna,pos_linha,largura,altura);
@@ -91,7 +92,7 @@ void Plotter::mousePressEvent(QMouseEvent *event)
     emit mouseY(y);
     posY=x/largura;
     posX=y/altura;
-    escultor->setColor(cor.red()/255,cor.green()/255,cor.blue()/255,1);
+    escultor->setColor(cor.red()/255.0,cor.green()/255.0,cor.blue()/255.0,1);
     if(prox_acao=="putvoxel"){
         escultor->putVoxel(posX,posY,posZ);
     }
@@ -138,6 +139,14 @@ void Plotter::setDimensoes(int x, int y, int z)
     dimX = x;  dimY = y; dimZ = z;
     escultor = new Sculptor(dimX,dimY,dimZ);
     repaint();
+}
+
+void Plotter::salva()
+{
+    QString nomeArquivo = QFileDialog::getSaveFileName(this, tr("Save"),"",tr("(*.off);;All Files (*)"));
+    if (nomeArquivo.compare("")){
+        escultor->writeOFF(nomeArquivo.toStdString());
+    }
 }
 
 void Plotter::getProf(int zAtual)

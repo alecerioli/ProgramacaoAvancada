@@ -21,6 +21,11 @@ MainWindow::MainWindow(QWidget *parent) :
             this,
             &MainWindow::dimensoes);
 
+    connect(ui->actionSave,
+            &QAction::triggered,
+            ui->widget,
+            &Plotter::salva);
+
     connect(ui->horizontalSliderR,
             &QAbstractSlider::valueChanged,
             ui->widget,
@@ -138,6 +143,7 @@ void MainWindow::dimensoes()
         ui->widget->setDimensoes(x,y,z);
     }
 }
+
 
 
 

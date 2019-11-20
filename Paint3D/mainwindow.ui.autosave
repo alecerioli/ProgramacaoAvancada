@@ -565,9 +565,6 @@
    </property>
   </action>
   <action name="actionSave">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
    <property name="icon">
     <iconset>
      <normaloff>:/icons/salvar.svg</normaloff>:/icons/salvar.svg</iconset>

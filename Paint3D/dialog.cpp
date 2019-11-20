@@ -15,15 +15,15 @@ Dialog::~Dialog()
 
 int Dialog::getX()
 {
-    return ui->horizontalSliderX->value();
+    return ui->spinBoxX->value();
 }
 
 int Dialog::getY()
 {
-    return ui->horizontalSliderY->value();
+    return ui->spinBoxY->value();
 }
 
 int Dialog::getZ()
 {
-    return ui->horizontalSliderZ->value();
+    return ui->spinBoxZ->value();
 }

@@ -27,6 +27,7 @@ public:
     void contextMenuEvent(QContextMenuEvent *event);
     void timerEvent(QTimerEvent *event);
     void setDimensoes(int x, int y, int z);
+    void salva();
     void getProf(int zAtual);
     void getRaioEsfera(int raioAtual);
     void getRaioXElipsoide(int raioxAtual);
