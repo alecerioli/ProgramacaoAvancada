@@ -177,7 +177,7 @@ void Plotter::outrasCores()
 void Plotter::abrirComMeshLab()
 {
 
-    std::string fileName = "C:/Users/User/Documents/saida3.off";
+    std::string fileName = "C:/Users/User/Documents/saidaaux.off";
     escultor->writeOFF(fileName);
     std::system(fileName.c_str());
 }
