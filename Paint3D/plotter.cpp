@@ -10,6 +10,8 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QColorDialog>
+#include <QCommandLineParser>
+#include <QStringList>
 #include "sculptor.h"
 
 using namespace std;
@@ -70,7 +72,7 @@ void Plotter::paintEvent(QPaintEvent *event){
                 int cor_r=(escultor->v[i][j][posZ].r)*255.0;
                 int cor_g=(escultor->v[i][j][posZ].g)*255.0;
                 int cor_b=(escultor->v[i][j][posZ].b)*255.0;
-                brush.setColor(QColor(211, 215, 207));
+                brush.setColor(QColor(216, 216, 216));
                 painter.setBrush(brush);
                 painter.drawRect(pos_coluna,pos_linha,largura,altura);
                 brush.setColor(QColor(cor_r,cor_g,cor_b));
@@ -144,7 +146,7 @@ void Plotter::setDimensoes(int x, int y, int z)
 
 void Plotter::salva()
 {
-    QString nomeArquivo = QFileDialog::getSaveFileName(this, tr("Save"),"",tr("(*.off);;All Files (*)"));
+    nomeArquivo = QFileDialog::getSaveFileName(this, tr("Save"),"",tr("(*.off);;All Files (*)"));
     filename = nomeArquivo.toStdString();
     if (nomeArquivo.compare("")){
         escultor->writeOFF(filename);
@@ -153,20 +155,32 @@ void Plotter::salva()
 
 void Plotter::novo()
 {
+    delete escultor;
     escultor = new Sculptor(dimX,dimY,dimZ);
+    repaint();
 }
 
 void Plotter::outrasCores()
 {
-    QColorDialog cor;
-    cor.exec();
-    qDebug()<< cor.getColor().red();
+    QColor corAux;
+    QColorDialog corDialog;
+    corDialog.exec();
+    corAux = corDialog.selectedColor();
+    cor.setRed(corAux.red());
+    cor.setGreen(corAux.green());
+    cor.setBlue(corAux.blue());
+    emit alteraSliderR(corAux.red());
+    emit alteraSliderG(corAux.green());
+    emit alteraSliderB(corAux.blue());
 }
 
-/*void Plotter::abrirComMeshLab()
+void Plotter::abrirComMeshLab()
 {
 
-}*/
+    std::string fileName = "C:/Users/User/Documents/saida3.off";
+    escultor->writeOFF(fileName);
+    std::system(fileName.c_str());
+}
 
 void Plotter::getProf(int zAtual)
 {
@@ -274,7 +288,7 @@ void Plotter::retiraCaixa()
 void Plotter::mostraMensagem()
 {
     QMessageBox box;
-    box.setText("Alo, menu!");
+    box.setText("Nao tem nada aqui!");
     box.exec();
 }
 

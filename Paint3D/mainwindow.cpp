@@ -36,10 +36,10 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->widget,
             &Plotter::outrasCores);
 
-    /*connect(ui->actionMeshLab,
+    connect(ui->actionMeshLab,
             &QAction::triggered,
             ui->widget,
-            &Plotter::abrirComMeshLab);*/
+            &Plotter::abrirComMeshLab);
 
     connect(ui->horizontalSliderR,
             &QAbstractSlider::valueChanged,
@@ -135,6 +135,21 @@ MainWindow::MainWindow(QWidget *parent) :
             &QAction::triggered,
             ui->widget,
             &Plotter::retiraCaixa);
+
+    connect(ui->widget,
+            &Plotter::alteraSliderR,
+            ui->horizontalSliderR,
+            &QAbstractSlider::setValue);
+
+    connect(ui->widget,
+            &Plotter::alteraSliderG,
+            ui->horizontalSliderG,
+            &QAbstractSlider::setValue);
+
+    connect(ui->widget,
+            &Plotter::alteraSliderB,
+            ui->horizontalSliderB,
+            &QAbstractSlider::setValue);
 }
 
 MainWindow::~MainWindow()
@@ -157,7 +172,12 @@ void MainWindow::dimensoes()
         z = d.getZ();
         ui->widget->setDimensoes(x,y,z);
         ui->horizontalSliderProf->setMaximum(z-1);
-        ui->horizontalSliderRaio->setMaximum(x-1);
+        if(x <= y){
+            ui->horizontalSliderRaio->setMaximum(x-1);
+        }
+        else{
+            ui->horizontalSliderRaio->setMaximum(y-1);
+        }
         ui->horizontalSliderRaioX->setMaximum(x/2-1);
         ui->horizontalSliderRaioY->setMaximum(y/2-1);
         ui->horizontalSliderRaioZ->setMaximum(z/2-1);

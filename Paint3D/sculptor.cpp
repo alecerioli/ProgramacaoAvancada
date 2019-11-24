@@ -17,20 +17,20 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
         ny=0;
         nz=0;
     }
-    v= new Voxel**[nz];
-    v[0]= new Voxel*[nz*nx];
-    for (int i=1;i<nz;i++){
-        v[i]= v[i-1]+ nx;
+    v= new Voxel**[nx];
+    v[0]= new Voxel*[ny*nx];
+    for (int i=1;i<nx;i++){
+        v[i]= v[i-1]+ ny;
     }
     v[0][0]= new Voxel[nz*ny*nx];
     int n = 0;
-    for (int i=0; i<nz;i++){
-        for(int j=0; j<nx;j++){
-            v[i][j] = v[0][0] + n*ny;
+    for (int i=0; i<nx;i++){
+        for(int j=0; j<ny;j++){
+            v[i][j] = v[0][0] + n*nz;
             n++;
         }
     }
-    for(int i=0;i<nz*nx*ny;i++){
+    for(int i=0;i<nx*ny*nz;i++){
         v[0][0][i].isOn=false;
     }
     cout<<"construtor padrao\n";
@@ -77,15 +77,18 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
     for(int i=x0;i<=x1;i++){
         for(int j=y0;j<=y1;j++){
             for(int k=z0;k<=z1;k++){
-                v[i][j][k].isOn=true;
-                v[i][j][k].r=r;
-                v[i][j][k].g=g;
-                v[i][j][k].b=b;
-                v[i][j][k].a=a;
+                if(i>=0 && i<nx && j>=0 && j<ny && k>=0 && k<nz){
+                    v[i][j][k].isOn=true;
+                    v[i][j][k].r=r;
+                    v[i][j][k].g=g;
+                    v[i][j][k].b=b;
+                    v[i][j][k].a=a;
+                }
             }
         }
     }
 }
+
 
 void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
@@ -97,6 +100,7 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
         }
     }
 }
+
 
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
