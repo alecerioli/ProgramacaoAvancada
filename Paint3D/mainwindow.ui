@@ -541,7 +541,7 @@
   </action>
   <action name="actionNew">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/resources/new.svg</normaloff>:/icons/resources/new.svg</iconset>
    </property>
    <property name="text">
@@ -553,7 +553,7 @@
   </action>
   <action name="actionMeshLab">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/resources/meshlab.svg</normaloff>:/icons/resources/meshlab.svg</iconset>
    </property>
    <property name="text">

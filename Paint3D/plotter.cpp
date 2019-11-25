@@ -87,6 +87,7 @@ void Plotter::paintEvent(QPaintEvent *event){
 void Plotter::mousePressEvent(QMouseEvent *event)
 {
     int x, y;
+    mousepressionado=true;
     x = event->x();
     y = event->y();
     qDebug() << x << y;
@@ -120,6 +121,51 @@ void Plotter::mousePressEvent(QMouseEvent *event)
     if(prox_acao=="cutbox"){
         escultor->cutBox(posX-meia_largura,posX+meia_largura,posY-meia_altura,posY+meia_altura,posZ-meia_espessura,posZ+meia_espessura);
     }
+}
+
+void Plotter::mouseMoveEvent(QMouseEvent *event)
+{
+    if(mousepressionado==true){
+        int x, y;
+        x = event->x();
+        y = event->y();
+        qDebug() << x << y;
+        qDebug() << event->button();
+        emit mouseX(x);
+        emit mouseY(y);
+        posY=x/largura;
+        posX=y/altura;
+        escultor->setColor(cor.red()/255.0,cor.green()/255.0,cor.blue()/255.0,1);
+        if(prox_acao=="putvoxel"){
+            escultor->putVoxel(posX,posY,posZ);
+        }
+        if(prox_acao=="cutvoxel"){
+            escultor->cutVoxel(posX,posY,posZ);
+        }
+        if(prox_acao=="putsphere"){
+            escultor->putSphere(posX,posY,posZ,raio);
+        }
+        if(prox_acao=="cutsphere"){
+            escultor->cutSphere(posX,posY,posZ,raio);
+        }
+        if(prox_acao=="putellipsoid"){
+            escultor->putEllipsoid(posX,posY,posZ,raioX,raioY,raioZ);
+        }
+        if(prox_acao=="cutellipsoid"){
+            escultor->cutEllipsoid(posX,posY,posZ,raioX,raioY,raioZ);
+        }
+        if(prox_acao=="putbox"){
+            escultor->putBox(posX-meia_largura,posX+meia_largura,posY-meia_altura,posY+meia_altura,posZ-meia_espessura,posZ+meia_espessura);
+        }
+        if(prox_acao=="cutbox"){
+            escultor->cutBox(posX-meia_largura,posX+meia_largura,posY-meia_altura,posY+meia_altura,posZ-meia_espessura,posZ+meia_espessura);
+        }
+    }
+}
+
+void Plotter::mouseReleaseEvent(QMouseEvent *event)
+{
+    mousepressionado=false;
 }
 
 
@@ -177,7 +223,7 @@ void Plotter::outrasCores()
 void Plotter::abrirComMeshLab()
 {
 
-    std::string fileName = "C:/Users/User/Documents/saidaaux.off";
+    std::string fileName = "C:/Users/MatrizD42018/Documents/saidaaux.off";
     escultor->writeOFF(fileName);
     std::system(fileName.c_str());
 }

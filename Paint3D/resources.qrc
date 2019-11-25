@@ -10,8 +10,6 @@
         <file>resources/putellipsoid.svg</file>
         <file>resources/putsphere.svg</file>
         <file>resources/putvoxel.svg</file>
-        <file>resources/new.svg</file>
-        <file>resources/meshlab.svg</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

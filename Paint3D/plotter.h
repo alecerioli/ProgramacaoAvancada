@@ -81,6 +81,10 @@ private:
      */
     int timerid;
     /**
+     * @brief mousepressionado: informa se o botao esquerdo do mouse está pressionado ou nao.
+     */
+    bool mousepressionado;
+    /**
      * @brief filename: endereco onde será salvo o arquivo OFF.
      */
     std::string filename;
@@ -121,6 +125,16 @@ public:
      * @param event : evento relacionado ao click esquerdo.
      */
     void mousePressEvent(QMouseEvent *event);
+    /**
+     * @brief mouseMoveEvent eh o metodo responsavel por detectar movimentacao do mouse na area de desenho.
+     * @param event : evento relacionado a movimentacao do mouse.
+     */
+    void mouseMoveEvent(QMouseEvent *event);
+    /**
+     * @brief mouseReleaseEvent eh o metodo responsavel por detectar o "nao-click" esquerdo.
+     * @param event : evento relacionado ao "nao-click" esquerdo.
+     */
+    void mouseReleaseEvent(QMouseEvent *event);
     /**
      * @brief contextMenuEvent eh o metodo responsavel por mostrar uma mensagem se hover um click direito.
      * @param event : evento relacionado ao click direito.
