@@ -6,69 +6,19 @@ Trabalhos da materia Programação Avançada
   
 **Sobre o uso do Escultor_v2** :  
 
--Crie um projeto;  
--Crie todas as classes (*headers* e *source*) copiando os codigos presentes na pasta *Escultor_v2*;  
-     -OBS: O arquivo *Voxel* é apenas *header* :  
-     
-      #ifndef VOXEL_H
-      #define VOXEL_H
-      /**
-      * @brief A struct Voxel
-      * eh uma unidade equivalente aos Pixels que comumente são usados em imagens digitais.
-      */
-          struct Voxel {
-      /**
-      * @brief r : intensidade da cor vermelha (entre 0 e 1).
-      */
-      float r;
-      /**
-      * @brief g : intensidade da cor verde (entre 0 e 1).
-      */
-      float g;
-      /**
-      * @brief b : intensidade da cor azul (entre 0 e 1).
-      */
-      float b; // Colors
-      /**
-      * @brief a : intensidade da opacidade (entre 0 e 1).
-      */
-      float a; // Transparency
-      /**
-      * @brief isOn : define se o voxel esta ativo ou nao.
-      */
-      bool isOn; // Included or not
-      };
-      #endif // VOXEL_H    
-        
--Uma vez copiadas todas as classes, copie o arquivo *main.cpp* :  
-
-     #include <iostream>
-     #include "figurageometrica.h"
-     #include "cutbox.h"
-     #include "cutellipsoid.h"
-     #include "cutsphere.h"
-     #include "cutvoxel.h"
-     #include "putvoxel.h"
-     #include "putsphere.h"
-     #include "putbox.h"
-     #include "putellipsoid.h"
-     #include "sculptor.h"
-     #include <vector>
-     #include <string>
-     #include "interpreter.h"
-
-     using namespace std;
-     int main(){
-     Interpreter tt;
-     Sculptor t=tt.Read("C:/Users/User/Documents/entrada1.txt");
-     t.writeOFF("C:/Users/User/Documents/saida1.off");
-     return 0;
-     }  
-   
 -Antes de compilar, salve o arquivo *entrada1.txt* e guarde seu endereço;  
 -Na *main.cpp*, como parametro da função *Read*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo  
--Além disso, escolher um endereço onde será guardado o arquivo de saida como parametro da função *t.writeOFF*;   
+-Além disso, escolha um endereço onde será guardado o arquivo de saida como parametro da função *t.writeOFF*;   
 -Compile e use o programa *Meshlab* para abrir o arquivo de saida e visualizar a escultura;
+-O arquivo *entrada1.txt* foi apenas para fins didaticos, voce pode montar o seu proprio arquivo de entrada e criar varias esculturas!
+
+
+**Sobre o uso do Paint3D** :
+
+-Ao compilar o projeto, uma interface será aberta onde poderão ser visualizados quadrados de mesmas dimensoes e alguns sliders, alem de uma barra superior com alguns desenhos e nomes (*Dimensoes*, *PutVoxel*, *CutSphere*..);
+-Primeiramente deverao ser escolhidas as dimensoes da escultura clicando em *Dimensoes* (mesmo a interface já abrindo com uma dimensao padrao de 30x30x30);
+-m seguida, existem algumas opções de desenho de figuras geométricas disponíveis para o usuário na barra superior. Poderá ser visto que existem figuras geométricas clássicas, como pontos, esferas, elipsoides e caixas. nhar, com as opções que contêm "put" ou os icones tiverem cores diferentes de cinza, como também é possível retirar, com a opção "cut" ou os icones sem cor (cinzas).
+-Para criar uma figura, clica-se na opção de figura desejada, muda-se seus parametros atravez dos sliders correspondentes ( os sliders sao agrupados em *ESFERA, ELIPSOIDE E CAIXA*, não existindo parametros para o *VOXEL*), e escolhe-se a cor, manualmente alterando as intensidades das cores vermelho, verde e azul ou clicando em *Outras Cores*. Por fim, basta clicar na area de desenho na posição desejada.
  
 
 
