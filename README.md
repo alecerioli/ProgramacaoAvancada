@@ -22,6 +22,8 @@ Trabalhos da materia Programação Avançada
 -Você poderá mudar o plano de visualização alterando o slider referente a profundidade, no canto inferior da interface, uma sendo uma escultura tridimensional;  
 -Durante a confecção da escultura, essa poderá ser visualizada de forma mais clara e realmente tridimensional antes de terminada clicando na opção *MeshLab*, se o usuario tiver o software instalado na sua maquina;  
 -Uma vez terminada a escultura, essa poderá ser salva clicando na opção *File* em em seguida em *Save*. Uma caixa de dialogo será aberta e o usuario poderá escolher um endereço para salvar o arquivo OFF correspondente a escultura desenhada na interface. Uma vez salva, será possivel começar novas esculturas clicando na mesma opção *File* em em seguida em *New*;  
+-Boa diversão!;  
+
 
 
 
