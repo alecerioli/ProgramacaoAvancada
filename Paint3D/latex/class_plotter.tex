@@ -1,0 +1,422 @@
+\hypertarget{class_plotter}{}\doxysection{Plotter Class Reference}
+\label{class_plotter}\index{Plotter@{Plotter}}
+
+
+A classe \mbox{\hyperlink{class_plotter}{Plotter}} representa o conjunto area-\/pintor do escultor 3D que será mostrado na \mbox{\hyperlink{class_main_window}{Main\+Window}}. Consiste no plano XY que pode ser alterado em profundidade e em figuras.  
+
+
+
+
+{\ttfamily \#include $<$plotter.\+h$>$}
+
+Inheritance diagram for Plotter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plotter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plotter_a01d45b1e5a3cde82ffbcf45eae33426b}\label{class_plotter_a01d45b1e5a3cde82ffbcf45eae33426b}} 
+void \mbox{\hyperlink{class_plotter_a01d45b1e5a3cde82ffbcf45eae33426b}{mostra\+Mensagem}} ()
+\begin{DoxyCompactList}\small\item\em mostra\+Mensagem serve para mostrar uma mensagem se hover um click direito. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plotter_acc318f23eb9f135d13431c05221e1ee9}\label{class_plotter_acc318f23eb9f135d13431c05221e1ee9}} 
+void \mbox{\hyperlink{class_plotter_acc318f23eb9f135d13431c05221e1ee9}{mouseX}} (int)
+\begin{DoxyCompactList}\small\item\em mouseX \+: sinal emitido que informa a posicao X do click esquerdo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_ae66c4db3fec253319af537aa627d8f1b}\label{class_plotter_ae66c4db3fec253319af537aa627d8f1b}} 
+void \mbox{\hyperlink{class_plotter_ae66c4db3fec253319af537aa627d8f1b}{mouseY}} (int)
+\begin{DoxyCompactList}\small\item\em mouseY \+: sinal emitido que informa a posicao Y do click esquerdo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a57088d422896db3bab9d0827b7d8b6f3}\label{class_plotter_a57088d422896db3bab9d0827b7d8b6f3}} 
+void \mbox{\hyperlink{class_plotter_a57088d422896db3bab9d0827b7d8b6f3}{altera\+SliderR}} (int)
+\begin{DoxyCompactList}\small\item\em altera\+SliderR \+: sinal emitido para alterar o slide referente a intensidade da cor vermelha. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a1f7dd166cd4014da478e00cd42b94be5}\label{class_plotter_a1f7dd166cd4014da478e00cd42b94be5}} 
+void \mbox{\hyperlink{class_plotter_a1f7dd166cd4014da478e00cd42b94be5}{altera\+SliderG}} (int)
+\begin{DoxyCompactList}\small\item\em altera\+SliderG \+: sinal emitido para alterar o slide referente a intensidade da cor verde. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a9b7206969d956c53a54028c417ac49b1}\label{class_plotter_a9b7206969d956c53a54028c417ac49b1}} 
+void \mbox{\hyperlink{class_plotter_a9b7206969d956c53a54028c417ac49b1}{altera\+SliderB}} (int)
+\begin{DoxyCompactList}\small\item\em altera\+SliderB \+: sinal emitido para alterar o slide referente a intensidade da cor azul. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plotter_a1807627530de30ae58dff3c42a823497}{Plotter}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_plotter}{Plotter}} eh o construtor da classe \mbox{\hyperlink{class_plotter}{Plotter}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a06477bf987646f000a8982db1352a11d}{paint\+Event}} (Q\+Paint\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em paint\+Event eh o metodo responsavel por desenhar na area de desenho. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_aac8dfc9c49d06ccf085973ceec6eb50c}{mouse\+Press\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Press\+Event eh o metodo responsavel por detectar clicks esquerdos e capturar a posicao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_aedd6ee525b4cacb6bcbc7540ed1ef3e9}{mouse\+Move\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Move\+Event eh o metodo responsavel por detectar movimentacao do mouse na area de desenho. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_ab2bc4de7e7b866686beafde21cf2c872}{mouse\+Release\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Release\+Event eh o metodo responsavel por detectar o \char`\"{}nao-\/click\char`\"{} esquerdo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a2cc0b4d72fabb1b52448e4685bc4ad17}{context\+Menu\+Event}} (Q\+Context\+Menu\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em context\+Menu\+Event eh o metodo responsavel por mostrar uma mensagem se hover um click direito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a63aa82ff02f2ff644403dfa4575c439b}{timer\+Event}} (Q\+Timer\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em timer\+Event eh o metodo responsavel por redesenhar o escultor a cada passagem de tempo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_aa1ad3075adf8a4566ce0dd73a2f5c133}{set\+Dimensoes}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em set\+Dimensoes eh um metodo que guarda as dimensoes e cria um escultor com essas dimensoes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_af4084ea7a39c31abf53693babf3dfeef}\label{class_plotter_af4084ea7a39c31abf53693babf3dfeef}} 
+void \mbox{\hyperlink{class_plotter_af4084ea7a39c31abf53693babf3dfeef}{salva}} ()
+\begin{DoxyCompactList}\small\item\em salva eh um metodo que salva a escultura no formato O\+FF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a0a844578f59f1c3629567c7e9f0baa5c}\label{class_plotter_a0a844578f59f1c3629567c7e9f0baa5c}} 
+void \mbox{\hyperlink{class_plotter_a0a844578f59f1c3629567c7e9f0baa5c}{novo}} ()
+\begin{DoxyCompactList}\small\item\em novo eh um metodo que cria um novo escultor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_ae34155f2e6effd4de5b3a41ffa2ace61}\label{class_plotter_ae34155f2e6effd4de5b3a41ffa2ace61}} 
+void \mbox{\hyperlink{class_plotter_ae34155f2e6effd4de5b3a41ffa2ace61}{outras\+Cores}} ()
+\begin{DoxyCompactList}\small\item\em outras\+Cores eh um metodo que abre uma caixa de dialogo para escolher a cor (Q\+Cor\+Dialog). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_aaaf17b8a71a05047bb96b075ac94e12f}\label{class_plotter_aaaf17b8a71a05047bb96b075ac94e12f}} 
+void \mbox{\hyperlink{class_plotter_aaaf17b8a71a05047bb96b075ac94e12f}{abrir\+Com\+Mesh\+Lab}} ()
+\begin{DoxyCompactList}\small\item\em abrir\+Com\+Mesh\+Lab eh um metodo que abre o escultor no programa Mesh\+Lab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_abba910564945c02a3db6489eb80f7010}{get\+Prof}} (int z\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Prof eh uma funcao que guarda a profundidade atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_aebe32ed9786921783664ec5fb504e13a}{get\+Raio\+Esfera}} (int raio\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Raio\+Esfera eh uma funcao que guarda o raio da esfera que será colocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a8841d410a954b2eb8438450ec4bb1212}{get\+Raio\+X\+Elipsoide}} (int raiox\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Raio\+X\+Elipsoide eh uma funcao que guarda o raio X da elipsoide que será colocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_adf4211eb6754d08379be9017645e0190}{get\+Raio\+Y\+Elipsoide}} (int raioy\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Raio\+Y\+Elipsoide eh uma funcao que guarda o raio Y da elipsoide que será colocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_af2e419965fc738826ed820df219183f8}{get\+Raio\+Z\+Elipsoide}} (int raioz\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Raio\+Z\+Elipsoide eh uma funcao que guarda o raio Z da elipsoide que será colocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a3d09e3b83485e725cf528c791e0431ca}{get\+Largura\+Caixa}} (int larg\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Largura\+Caixa eh uma funcao que guarda metade da largura da caixa que será colocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a3332d57d2c573572d54927ee2557cfce}{get\+Altura\+Caixa}} (int alt\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Altura\+Caixa eh uma funcao que guarda metade da altura da caixa que será colocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a9e1bb40232c25ec1c81e676f98288d43}{get\+Espessura\+Caixa}} (int esp\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Espessura\+Caixa eh uma funcao que guarda metade da espessura da caixa que será colocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_ad3813ffcd6b9509478cc1549ae6f4423}{get\+Cor\+Vermelha}} (int red\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Cor\+Vermelha eh uma funcao que guarda a intensidade da cor vermelha do desenho. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a3d5e3eb101794a4c882857f53e914b02}{get\+Cor\+Verde}} (int green\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Cor\+Verde eh uma funcao que guarda a intensidade da cor verde do desenho. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_adc29fa85a18cac053e2a474d9d08e50b}{get\+Cor\+Azul}} (int blue\+Atual)
+\begin{DoxyCompactList}\small\item\em get\+Cor\+Azul eh uma funcao que guarda a intensidade da cor azul do desenho. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a84861285a446938285d686abe55874c9}\label{class_plotter_a84861285a446938285d686abe55874c9}} 
+void \mbox{\hyperlink{class_plotter_a84861285a446938285d686abe55874c9}{coloca\+Voxel}} ()
+\begin{DoxyCompactList}\small\item\em coloca\+Voxel eh um metodo que define a proxima acão como sendo \char`\"{}putvoxel\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a2e077eb8ab5a6c67ed1b5eb6baf3886d}\label{class_plotter_a2e077eb8ab5a6c67ed1b5eb6baf3886d}} 
+void \mbox{\hyperlink{class_plotter_a2e077eb8ab5a6c67ed1b5eb6baf3886d}{retira\+Voxel}} ()
+\begin{DoxyCompactList}\small\item\em retira\+Voxel eh um metodo que define a proxima acão como sendo \char`\"{}cutvoxel\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_aa50c212d8f9ff44be4dc7794473d430c}\label{class_plotter_aa50c212d8f9ff44be4dc7794473d430c}} 
+void \mbox{\hyperlink{class_plotter_aa50c212d8f9ff44be4dc7794473d430c}{coloca\+Esfera}} ()
+\begin{DoxyCompactList}\small\item\em coloca\+Esfera eh um metodo que define a proxima acão como sendo \char`\"{}putsphere\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_abf875e585a4cfacb39dae1f3530047f7}\label{class_plotter_abf875e585a4cfacb39dae1f3530047f7}} 
+void \mbox{\hyperlink{class_plotter_abf875e585a4cfacb39dae1f3530047f7}{retira\+Esfera}} ()
+\begin{DoxyCompactList}\small\item\em retira\+Esfera eh um metodo que define a proxima acão como sendo \char`\"{}cutvoxel\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a8f870aeb06ba4f6164ab00587f819b88}\label{class_plotter_a8f870aeb06ba4f6164ab00587f819b88}} 
+void \mbox{\hyperlink{class_plotter_a8f870aeb06ba4f6164ab00587f819b88}{coloca\+Elipsoide}} ()
+\begin{DoxyCompactList}\small\item\em coloca\+Elipsoide eh um metodo que define a proxima acão como sendo \char`\"{}putellipsoid\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a093ac451fc8d62d4f8a7c568a5895b68}\label{class_plotter_a093ac451fc8d62d4f8a7c568a5895b68}} 
+void \mbox{\hyperlink{class_plotter_a093ac451fc8d62d4f8a7c568a5895b68}{retira\+Elipsoide}} ()
+\begin{DoxyCompactList}\small\item\em retira\+Elipsoide eh um metodo que define a proxima acão como sendo \char`\"{}cutellipsoid\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_a59c3aa55df989675f1f0a096e21a5194}\label{class_plotter_a59c3aa55df989675f1f0a096e21a5194}} 
+void \mbox{\hyperlink{class_plotter_a59c3aa55df989675f1f0a096e21a5194}{coloca\+Caixa}} ()
+\begin{DoxyCompactList}\small\item\em coloca\+Caixa eh um metodo que define a proxima acão como sendo \char`\"{}putbox\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plotter_af8a15f491f761082c388a7f3761fac6f}\label{class_plotter_af8a15f491f761082c388a7f3761fac6f}} 
+void \mbox{\hyperlink{class_plotter_af8a15f491f761082c388a7f3761fac6f}{retira\+Caixa}} ()
+\begin{DoxyCompactList}\small\item\em retira\+Caixa eh um metodo que define a proxima acão como sendo \char`\"{}cutbox\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \mbox{\hyperlink{class_plotter}{Plotter}} representa o conjunto area-\/pintor do escultor 3D que será mostrado na \mbox{\hyperlink{class_main_window}{Main\+Window}}. Consiste no plano XY que pode ser alterado em profundidade e em figuras. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_plotter_a1807627530de30ae58dff3c42a823497}\label{class_plotter_a1807627530de30ae58dff3c42a823497}} 
+\index{Plotter@{Plotter}!Plotter@{Plotter}}
+\index{Plotter@{Plotter}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{Plotter()}{Plotter()}}
+{\footnotesize\ttfamily Plotter\+::\+Plotter (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_plotter}{Plotter}} eh o construtor da classe \mbox{\hyperlink{class_plotter}{Plotter}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \+: parametro geralmente nulo. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plotter_a2cc0b4d72fabb1b52448e4685bc4ad17}\label{class_plotter_a2cc0b4d72fabb1b52448e4685bc4ad17}} 
+\index{Plotter@{Plotter}!contextMenuEvent@{contextMenuEvent}}
+\index{contextMenuEvent@{contextMenuEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{contextMenuEvent()}{contextMenuEvent()}}
+{\footnotesize\ttfamily void Plotter\+::context\+Menu\+Event (\begin{DoxyParamCaption}\item[{Q\+Context\+Menu\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+context\+Menu\+Event eh o metodo responsavel por mostrar uma mensagem se hover um click direito. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \+: evento relacionado ao click direito. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_a3332d57d2c573572d54927ee2557cfce}\label{class_plotter_a3332d57d2c573572d54927ee2557cfce}} 
+\index{Plotter@{Plotter}!getAlturaCaixa@{getAlturaCaixa}}
+\index{getAlturaCaixa@{getAlturaCaixa}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getAlturaCaixa()}{getAlturaCaixa()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Altura\+Caixa (\begin{DoxyParamCaption}\item[{int}]{alt\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Altura\+Caixa eh uma funcao que guarda metade da altura da caixa que será colocada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alt\+Atual} & \+: meia altura atual da caixa que será colocada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_adc29fa85a18cac053e2a474d9d08e50b}\label{class_plotter_adc29fa85a18cac053e2a474d9d08e50b}} 
+\index{Plotter@{Plotter}!getCorAzul@{getCorAzul}}
+\index{getCorAzul@{getCorAzul}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getCorAzul()}{getCorAzul()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Cor\+Azul (\begin{DoxyParamCaption}\item[{int}]{blue\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Cor\+Azul eh uma funcao que guarda a intensidade da cor azul do desenho. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em blue\+Atual} & intensidade da cor azul atual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_a3d5e3eb101794a4c882857f53e914b02}\label{class_plotter_a3d5e3eb101794a4c882857f53e914b02}} 
+\index{Plotter@{Plotter}!getCorVerde@{getCorVerde}}
+\index{getCorVerde@{getCorVerde}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getCorVerde()}{getCorVerde()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Cor\+Verde (\begin{DoxyParamCaption}\item[{int}]{green\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Cor\+Verde eh uma funcao que guarda a intensidade da cor verde do desenho. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em green\+Atual} & intensidade da cor verde atual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_ad3813ffcd6b9509478cc1549ae6f4423}\label{class_plotter_ad3813ffcd6b9509478cc1549ae6f4423}} 
+\index{Plotter@{Plotter}!getCorVermelha@{getCorVermelha}}
+\index{getCorVermelha@{getCorVermelha}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getCorVermelha()}{getCorVermelha()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Cor\+Vermelha (\begin{DoxyParamCaption}\item[{int}]{red\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Cor\+Vermelha eh uma funcao que guarda a intensidade da cor vermelha do desenho. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red\+Atual} & intensidade da cor vermelha atual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_a9e1bb40232c25ec1c81e676f98288d43}\label{class_plotter_a9e1bb40232c25ec1c81e676f98288d43}} 
+\index{Plotter@{Plotter}!getEspessuraCaixa@{getEspessuraCaixa}}
+\index{getEspessuraCaixa@{getEspessuraCaixa}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getEspessuraCaixa()}{getEspessuraCaixa()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Espessura\+Caixa (\begin{DoxyParamCaption}\item[{int}]{esp\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Espessura\+Caixa eh uma funcao que guarda metade da espessura da caixa que será colocada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em esp\+Atual} & \+: meia espessura atual da caixa que será colocada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_a3d09e3b83485e725cf528c791e0431ca}\label{class_plotter_a3d09e3b83485e725cf528c791e0431ca}} 
+\index{Plotter@{Plotter}!getLarguraCaixa@{getLarguraCaixa}}
+\index{getLarguraCaixa@{getLarguraCaixa}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getLarguraCaixa()}{getLarguraCaixa()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Largura\+Caixa (\begin{DoxyParamCaption}\item[{int}]{larg\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Largura\+Caixa eh uma funcao que guarda metade da largura da caixa que será colocada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em larg\+Atual} & \+: meia largura atual da caixa que será colocada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_abba910564945c02a3db6489eb80f7010}\label{class_plotter_abba910564945c02a3db6489eb80f7010}} 
+\index{Plotter@{Plotter}!getProf@{getProf}}
+\index{getProf@{getProf}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getProf()}{getProf()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Prof (\begin{DoxyParamCaption}\item[{int}]{z\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Prof eh uma funcao que guarda a profundidade atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z\+Atual} & \+: profundidade atual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_aebe32ed9786921783664ec5fb504e13a}\label{class_plotter_aebe32ed9786921783664ec5fb504e13a}} 
+\index{Plotter@{Plotter}!getRaioEsfera@{getRaioEsfera}}
+\index{getRaioEsfera@{getRaioEsfera}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getRaioEsfera()}{getRaioEsfera()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Raio\+Esfera (\begin{DoxyParamCaption}\item[{int}]{raio\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Raio\+Esfera eh uma funcao que guarda o raio da esfera que será colocada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raio\+Atual} & \+: raio atual da esfera que será colocada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_a8841d410a954b2eb8438450ec4bb1212}\label{class_plotter_a8841d410a954b2eb8438450ec4bb1212}} 
+\index{Plotter@{Plotter}!getRaioXElipsoide@{getRaioXElipsoide}}
+\index{getRaioXElipsoide@{getRaioXElipsoide}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getRaioXElipsoide()}{getRaioXElipsoide()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Raio\+X\+Elipsoide (\begin{DoxyParamCaption}\item[{int}]{raiox\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Raio\+X\+Elipsoide eh uma funcao que guarda o raio X da elipsoide que será colocada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raiox\+Atual} & \+: raio X atual da elipsoide que será colocada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_adf4211eb6754d08379be9017645e0190}\label{class_plotter_adf4211eb6754d08379be9017645e0190}} 
+\index{Plotter@{Plotter}!getRaioYElipsoide@{getRaioYElipsoide}}
+\index{getRaioYElipsoide@{getRaioYElipsoide}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getRaioYElipsoide()}{getRaioYElipsoide()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Raio\+Y\+Elipsoide (\begin{DoxyParamCaption}\item[{int}]{raioy\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Raio\+Y\+Elipsoide eh uma funcao que guarda o raio Y da elipsoide que será colocada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raioy\+Atual} & \+: raio Y atual da elispoide que será colocada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_af2e419965fc738826ed820df219183f8}\label{class_plotter_af2e419965fc738826ed820df219183f8}} 
+\index{Plotter@{Plotter}!getRaioZElipsoide@{getRaioZElipsoide}}
+\index{getRaioZElipsoide@{getRaioZElipsoide}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{getRaioZElipsoide()}{getRaioZElipsoide()}}
+{\footnotesize\ttfamily void Plotter\+::get\+Raio\+Z\+Elipsoide (\begin{DoxyParamCaption}\item[{int}]{raioz\+Atual }\end{DoxyParamCaption})}
+
+
+
+get\+Raio\+Z\+Elipsoide eh uma funcao que guarda o raio Z da elipsoide que será colocada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raioz\+Atual} & \+: raio Z atual da elipsoide que será colocada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_aedd6ee525b4cacb6bcbc7540ed1ef3e9}\label{class_plotter_aedd6ee525b4cacb6bcbc7540ed1ef3e9}} 
+\index{Plotter@{Plotter}!mouseMoveEvent@{mouseMoveEvent}}
+\index{mouseMoveEvent@{mouseMoveEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{mouseMoveEvent()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily void Plotter\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+mouse\+Move\+Event eh o metodo responsavel por detectar movimentacao do mouse na area de desenho. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \+: evento relacionado a movimentacao do mouse. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_aac8dfc9c49d06ccf085973ceec6eb50c}\label{class_plotter_aac8dfc9c49d06ccf085973ceec6eb50c}} 
+\index{Plotter@{Plotter}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Plotter\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+mouse\+Press\+Event eh o metodo responsavel por detectar clicks esquerdos e capturar a posicao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \+: evento relacionado ao click esquerdo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_ab2bc4de7e7b866686beafde21cf2c872}\label{class_plotter_ab2bc4de7e7b866686beafde21cf2c872}} 
+\index{Plotter@{Plotter}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily void Plotter\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+mouse\+Release\+Event eh o metodo responsavel por detectar o \char`\"{}nao-\/click\char`\"{} esquerdo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \+: evento relacionado ao \char`\"{}nao-\/click\char`\"{} esquerdo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_a06477bf987646f000a8982db1352a11d}\label{class_plotter_a06477bf987646f000a8982db1352a11d}} 
+\index{Plotter@{Plotter}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void Plotter\+::paint\+Event (\begin{DoxyParamCaption}\item[{Q\+Paint\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+paint\+Event eh o metodo responsavel por desenhar na area de desenho. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \+: evento relacionado ao desenho. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_aa1ad3075adf8a4566ce0dd73a2f5c133}\label{class_plotter_aa1ad3075adf8a4566ce0dd73a2f5c133}} 
+\index{Plotter@{Plotter}!setDimensoes@{setDimensoes}}
+\index{setDimensoes@{setDimensoes}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{setDimensoes()}{setDimensoes()}}
+{\footnotesize\ttfamily void Plotter\+::set\+Dimensoes (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+set\+Dimensoes eh um metodo que guarda as dimensoes e cria um escultor com essas dimensoes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: futura dimensao X. \\
+\hline
+{\em y} & \+: futura dimensao Y. \\
+\hline
+{\em z} & \+: futura dimensao Z. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_plotter_a63aa82ff02f2ff644403dfa4575c439b}\label{class_plotter_a63aa82ff02f2ff644403dfa4575c439b}} 
+\index{Plotter@{Plotter}!timerEvent@{timerEvent}}
+\index{timerEvent@{timerEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{timerEvent()}{timerEvent()}}
+{\footnotesize\ttfamily void Plotter\+::timer\+Event (\begin{DoxyParamCaption}\item[{Q\+Timer\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+timer\+Event eh o metodo responsavel por redesenhar o escultor a cada passagem de tempo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \+: evento relacionado ao tempo. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plotter.\+h\item 
+plotter.\+cpp\end{DoxyCompactItemize}
