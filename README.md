@@ -7,10 +7,11 @@ Trabalhos da materia Programação Avançada
 **Sobre o uso do Escultor_v2** :  
 
 -Antes de compilar, salve o arquivo *entrada1.txt* e guarde seu endereço;  
--Na *main.cpp*, como parametro da função *Read*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo  
--Além disso, escolha um endereço onde será guardado o arquivo de saida como parametro da função *t.writeOFF*;   
--Compile e use o programa *Meshlab* para abrir o arquivo de saida e visualizar a escultura;
--O arquivo *entrada1.txt* foi apenas para fins didaticos, voce pode montar o seu proprio arquivo de entrada e criar varias esculturas!
+-Na *main.cpp*, como parametro da função *Read*, coloque o endereço onde o arquivo *entrada1.txt* foi salvo;    
+-Além disso, escolha um endereço onde será guardado o arquivo de saida como parametro da função *t.writeOFF*;     
+-Compile e use o programa *Meshlab* para abrir o arquivo de saida e visualizar a escultura;  
+-O arquivo *entrada1.txt* foi apenas para fins didaticos, voce pode montar o seu proprio arquivo de entrada e criar varias esculturas!  
+
 
 
 **Sobre o uso do Paint3D** :
